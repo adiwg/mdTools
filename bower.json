@@ -1,0 +1,6 @@
+{
+  "name": "bower",
+  "dependencies": {
+    "d3": "~3"
+  }
+}

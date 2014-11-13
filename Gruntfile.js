@@ -87,8 +87,9 @@ module.exports = function(grunt) {
 
                 options : {
 
-                    targetDir : './files/plugins', // A directory where you want to keep your Bower packages.
-                    cleanup : true,                // Will clean target and bower directories.
+                    targetDir : './lib', // A directory where you want to keep your Bower packages.
+                    cleanTargetDir: false,
+                    cleanBowerDir: true,
                     layout : 'byComponent',        // Folder structure type.
                     verbose : true,                // Debug output.
 
