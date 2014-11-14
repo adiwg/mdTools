@@ -1,3 +1,5 @@
+@import 'loader';
+
 html, body {
   padding: 0;
   margin: 0;
@@ -144,14 +146,21 @@ div#info-tab-def.info-tab, #info-panel .info-tab pre {
   background-color: #DEF0F9;
 
   #translation-results {
+    display: none;
     overflow: hidden;
+    background-color: #F4F8F9;
+    padding: 1em;
 
     pre {
-      width: 95%;
+      width: 98%;
       margin: auto;
       overflow: auto;
-      background-color: #FFFBF4;
+      background-color: #FFF;
       padding: 10px;
+    }
+
+    &.error {
+      background-color: #FFE3E3;
     }
   }
 
