@@ -1,5 +1,10 @@
 @import 'loader';
 
+/***Variables***/
+$error-color: #FFE3E3;
+$valid-color: #CBFCCB;
+
+/***General***/
 html, body {
   padding: 0;
   margin: 0;
@@ -160,7 +165,11 @@ div#info-tab-def.info-tab, #info-panel .info-tab pre {
     }
 
     &.error {
-      background-color: #FFE3E3;
+      background-color: $error-color;
+    }
+
+    &.valid {
+      background-color: $valid-color;
     }
   }
 
@@ -179,15 +188,15 @@ div#info-tab-def.info-tab, #info-panel .info-tab pre {
 }
 
 #validation-results {
-  background-color: #CBFCCB;
+  background-color: $valid-color;
 }
 
 #validation-results.error {
-  background-color: #FFE3E3;
+  background-color: $error-color;
 }
       /*****Buttons******/
 .ui-icon-translate:after {
-    background-image: url("../images/translate.png");
+    background-image: url("../images/translate_white.png");
     background-size: 20px 20px;
 }
 
