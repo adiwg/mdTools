@@ -303,13 +303,16 @@ if (typeof JSV === 'undefined') {
             }
 
             cont.toggleClass('error', !result.valid);
+            $('#validator-page').animate({
+                scrollTop: $('#validation-results').offset().top + 20
+            }, 1000);
         },
 
         /**
          * Build a collapsible validation block.
          *
          * @param {object} err The error object
-         * @param {title} title The title for the error block
+         * @param {string} title The title for the error block
          */
         buildValError: function(err, title) {
             var main = '<div data-role="collapsible" data-collapsed="true" data-mini="true">' +
