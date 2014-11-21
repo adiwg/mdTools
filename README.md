@@ -1,11 +1,10 @@
-JSON Schema Viewer
+mdJSON Schema Viewer
 ==================
 
-JavaScript tool for visualizing [json-schemas](http://json-schema.org/), includes validator.
+JavaScript tool for visualizing [json-schemas](http://json-schema.org/), includes validator and support for the [mdTranslator](https://github.com/adiwg/mdTranslator) via the [API](http://mdtranslator.adiwg.org/).
 
-Right now, development is in the early stages. Progress is in between the "proof-of-concept" stage and *beta*.
-The [demo](http://jlblcc.github.io/json-schema-viewer/) is rendering the
-[adiwg-json-schemas](https://github.com/adiwg/adiwg-json-schemas).
+The [live application](http://jlblcc.github.io/mdJson-schema-viewer/) is rendering the
+[mdJson-schemas](https://github.com/adiwg/mdJson-schemas).
 
 
 Built using:
