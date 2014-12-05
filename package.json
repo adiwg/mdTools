@@ -3,16 +3,16 @@
   "name": "json-schema-viewer",
   "description": "Visualize JSON schemas using D3.js",
   "version": "0.1.0",
-  "homepage": "https://github.com/jlblcc/json-schema-viewer",
+  "homepage": "https://github.com/adiwg/mdJson-schema-viewer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlblcc/json-schema-viewer.git"
+    "url": "https://github.com/adiwg/mdJson-schema-viewer.git"
   },
   "author": {
     "name": "Josh Bradley"
   },
   "//": "The following FQDN is the endpoint for your assets (no trailing slash):",
-  "production": "http://jlblcc.github.io/json-schema-viewer",
+  "production": "http://www.adiwg.org/mdJson-schema-viewer",
   "licenses": [
     {
       "type": "Unlicense",
@@ -38,5 +38,8 @@
     "prod": "grunt prod",
     "watch": "grunt watch",
     "bower": "grunt bower"
+  },
+  "devDependencies": {
+    "grunt-gh-pages": "^0.9.1"
   }
 }
