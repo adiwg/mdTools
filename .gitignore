@@ -56,5 +56,8 @@ sitemap.xml.gz*~
 ####################
 
 node_modules
+prod
+index.html
 dev.html
 styles/*.css
+.grunt
