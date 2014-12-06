@@ -379,6 +379,7 @@ module.exports = function(grunt) {
          * @see http://gruntjs.com/configuring-tasks#globbing-patterns
          */
 
+
         copy : {
 
             prod : {
@@ -404,6 +405,19 @@ module.exports = function(grunt) {
 
         },
 
+       /**
+         * Deploy to GitHub Pages.
+         *
+         * @see https://github.com/tschaub/grunt-gh-pages
+         */
+
+      'gh-pages' : {
+        options: {
+          base: './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+        },
+        src: ['**/*']
+      },
+
     });
 
     /*----------------------------------( TASKS )----------------------------------*/
@@ -425,6 +439,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-preprocess');
 
     grunt.loadNpmTasks('grunt-contrib-copy');
+
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     //----------------------------------
 
