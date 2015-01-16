@@ -61,3 +61,7 @@ index.html
 dev.html
 styles/*.css
 .grunt
+##Bower
+/lib/jquery
+/lib/uri.js
+/lib/d3
