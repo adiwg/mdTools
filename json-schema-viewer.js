@@ -105,8 +105,9 @@ if (typeof JSV === 'undefined') {
             $( '#popup-error' ).enhanceWithin().popup();
 
             ///highlight plugin
-            $.fn.highlight = function (str, className) {
-                var regex = new RegExp('\\b'+str+'\\b', 'g');
+            $.fn.highlight = function (str, className, quote) {
+                var string = quote ? '\\"\\b'+str+'\\b\\"' : '\\b'+str+'\\b',
+                    regex = new RegExp(string, 'g');
 
                 return this.each(function () {
                     this.innerHTML = this.innerHTML.replace(regex, function(matched) {return '<span class="' + className + '">' + matched + '</span>';});
@@ -367,15 +368,17 @@ if (typeof JSV === 'undefined') {
 
             JSV.createPre(schema, tv4.getSchema(node.schema), false, node.plainName);
 
-            if(node.example) {
-                $.getJSON(node.schema.match( /^(.*?)(?=[^\/]*\.json)/g ) + node.example, function(data) {
-                    var pointer = node.example.split('#')[1];
+            var example = (!node.example && node.parent && node.parent.example && node.parent.type === 'object' ? node.parent.example : node.example);
+
+            if(example) {
+                $.getJSON(node.schema.match( /^(.*?)(?=[^\/]*\.json)/g ) + example, function(data) {
+                    var pointer = example.split('#')[1];
 
                     if(pointer) {
                         data = jsonpointer.get(data, pointer);
                     }
 
-                    JSV.createPre(ex, data);
+                    JSV.createPre(ex, data, false, node.plainName);
                 }).fail(function() {
                     ex.html('<h3>No example found.</h3>');
                 });
