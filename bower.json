@@ -1,6 +1,7 @@
 {
   "name": "bower",
   "dependencies": {
-    "d3": "~3"
+    "d3": "~3",
+    "uri.js": "~1.14.1"
   }
 }

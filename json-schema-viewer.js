@@ -98,6 +98,7 @@ if (typeof JSV === 'undefined') {
                 $('#loading').fadeOut('slow');
             };
             JSV.createDiagram(cb);
+
             JSV.initValidator();
 
             //initialize error popup
@@ -147,7 +148,7 @@ if (typeof JSV === 'undefined') {
                 JSV.resizeViewer();
                 if(focus) {
                     d3.select('#n-' + focus.id).classed('focus',true);
-                    $('#schema-path').html(JSV.compilePath(focus));
+                    JSV.setPermalink(focus);
                 }
             });
 
@@ -405,7 +406,7 @@ if (typeof JSV === 'undefined') {
             el.html(btn);
 
             if(exp) {
-                pre.highlight(exp, 'highlight');
+                pre.highlight(exp, 'highlight', true);
             }
             el.append(pre);
             pre.height(el.height() - btn.outerHeight(true) - (pre.outerHeight(true) - pre.height()));
@@ -425,6 +426,52 @@ if (typeof JSV === 'undefined') {
             }
 
             return p;
+        },
+
+        /**
+         * Create a "permalink" for the node.
+         */
+        setPermalink: function(node) {
+            var uri = new URI(),
+                path = JSV.getNodePath(node).join('-');
+
+            //uri.search({ v: path});
+            uri.hash($.mobile.activePage.attr('id') + '?v=' + path);
+            $('#permalink').html(JSV.compilePath(node));
+            $('#sharelink').val(uri.toString());
+        },
+
+        /**
+         * Create an index-based path for the node from the root.
+         */
+        getNodePath: function(node, path) {
+            var p = path || [],
+                parent = node.parent;
+
+            if(parent) {
+                p.unshift(parent.children.indexOf(node));
+                return JSV.getNodePath(parent, p);
+            } else {
+                return p;
+            }
+        },
+
+        /**
+         * Expand an index-based path for the node from the root.
+         */
+        expandNodePath: function(path) {
+            var i,
+                node = JSV.treeData; //start with root
+
+            for (i = 0; i < path.length; i++) {
+                if(node._children) {
+                    JSV.expand(node);
+                }
+                node = node.children[path[i]];
+            }
+
+            JSV.update(JSV.treeData);
+            JSV.centerNode(node);
         },
 
         /**
@@ -702,7 +749,7 @@ if (typeof JSV === 'undefined') {
          */
         click: function (d) {
             if(!JSV.labels[d.name]) {
-                if (d3.event.defaultPrevented) {return;} // click suppressed
+                if (d3.event && d3.event.defaultPrevented) {return;} // click suppressed
                 d = JSV.toggleChildren(d);
                 JSV.update(d);
                 JSV.centerNode(d);
@@ -714,7 +761,7 @@ if (typeof JSV === 'undefined') {
          */
        clickTitle: function (d) {
             if(!JSV.labels[d.name]) {
-                if (d3.event.defaultPrevented) {return;} // click suppressed
+                if (d3.event && d3.event.defaultPrevented) {return;} // click suppressed
                 var panel = $( '#info-panel' );
 
                 if(JSV.focusNode) {
@@ -723,7 +770,7 @@ if (typeof JSV === 'undefined') {
                 JSV.focusNode = d;
                 JSV.centerNode(d);
                 d3.select('#n-' + d.id).classed('focus',true);
-                $('#schema-path').html(JSV.compilePath(d));
+                JSV.setPermalink(d);
 
                 $('#info-title').text('Info: ' + d.name);
                 JSV.setInfo(d);

@@ -147,7 +147,8 @@ module.exports = function(grunt) {
 
                 './Gruntfile.js',
                 './json-schema-viewer.js',
-                './lib/*.js'
+                './lib/translator.js',
+                './lib/tv4.async-load-jquery.js',
 
             ],
 
@@ -225,6 +226,8 @@ module.exports = function(grunt) {
                     './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/<%= pkg.name %>.min.js' : [
                         //'./files/scripts/jquery.js',
                         //'./files/scripts/jquery.*.js',
+                        './lib/uri.js/URI.js',
+                        //'./lib/uri.js/jquery.URI.js',
                         './lib/tv4/tv4.js',
                         './lib/tv4.async-load-jquery.js',
                         './lib/d3/d3.js',

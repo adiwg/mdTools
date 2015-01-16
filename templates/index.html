@@ -41,7 +41,13 @@
             </div>
         </div>
         <div data-role="footer">
-            <div id="schema-path" class="ui-content">Select a Node</div>
+            <div id="schema-path" class="ui-content">
+                <a href="#permalink-popup" id="permalink" data-rel="popup">Select a Node</a>
+                <div data-role="popup" id="permalink-popup" class="ui-content" data-arrow="true">
+                    <label for="sharelink">Share:</label>
+                    <input type="text" id="sharelink" style="min-width:300px;" placeholder="Select a Node to create a permalink." value="" data-theme="a">
+                </div>
+            </div>
         </div><!-- /footer -->
         <div data-display="push" data-role="panel" id="info-panel">
             <div data-role="header" data-theme="b" class="ui-mini">
@@ -216,9 +222,22 @@
     </div>
 
     <script type='text/javascript' src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        //handle permalinks before JQM is initialized
+        (function($) {
+            var hash = window.location.hash,
+                path = hash.match(/v=([^\&]+)/);
+
+            window.jsvInitPath = path ? path[1] : false;
+            window.location.hash = hash.match(/#[^\?]+/) || '';
+        })(jQuery);
+    </script>
     <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <!-- @if NODE_ENV!='PRODUCTION' -->
+    <script>$.ajaxSetup({ cache: false });</script>
     <script type='text/javascript' src="lib/tv4/tv4.min.js"></script>
+    <script type='text/javascript' src="lib/uri.js/URI.js"></script>
+    <!--<script type='text/javascript' src="lib/uri.js/jquery.URI.js"></script>-->
     <script type='text/javascript' src="lib/tv4.async-load-jquery.js"></script>
     <script type='text/javascript' src="lib/d3/d3.js"></script>
     <script type='text/javascript' src='lib/filereader/filereader.js'></script>
