@@ -39,6 +39,7 @@ module.exports = function(grunt) {
                       '<%= pkg.title || pkg.name %>' +
                       '<%= pkg.version ? " v" + pkg.version : "" %>' +
                       '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
+                      ' - For included libraries, see source for additional licensing info.' +
                       '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
                       ' */',
 
