@@ -31,6 +31,11 @@ if (typeof JSV === 'undefined') {
         treeData: null,
 
         /**
+         * The initialization status of the viewer page
+         */
+        viewerInit: false,
+
+        /**
          * The current viewer height
          */
         viewerHeight: 0,
@@ -89,6 +94,9 @@ if (typeof JSV === 'undefined') {
                 }
             }
 
+            JSV.contentHeight();
+            JSV.resizeViewer();
+
             $(document).on('pagecontainertransition', this.contentHeight);
             $(window).on('throttledresize orientationchange', this.contentHeight);
             $(window).on('resize', this.contentHeight);
@@ -118,7 +126,7 @@ if (typeof JSV === 'undefined') {
             $('body').on('pagecontainershow', function(event, ui) {
                 var page = ui.toPage;
 
-                if(page.attr('id') === 'viewer-page') {
+                if(page.attr('id') === 'viewer-page' && JSV.viewerInit) {
                     if(page.jqmData('infoOpen')) {
                         $('#info-panel'). panel('open');
                     }
@@ -127,7 +135,7 @@ if (typeof JSV === 'undefined') {
                         $('svg#jsv-tree').attr('width', $('#main-body').width())
                                          .attr('height', $('#main-body').height());
                         JSV.resizeViewer();
-                        JSV.resetViewer();
+                        //JSV.resetViewer();
 
                     }
 
@@ -159,13 +167,16 @@ if (typeof JSV === 'undefined') {
                 JSV.resizeViewer();
                 if (focus) {
                     d3.select('#n-' + focus.id).classed('focus', false);
-                    $('#schema-path').html('Select a Node...');
+                    $('#permalink').html('Select a Node...');
+                    $('#sharelink').val('');
                 }
             });
 
             //setup controls
             d3.selectAll('#zoom-controls>a').on('click', JSV.zoomClick);
             d3.select('#tree-controls>a#reset-tree').on('click', JSV.resetViewer);
+
+            JSV.viewerInit = true;
 
         },
 
@@ -180,8 +191,6 @@ if (typeof JSV === 'undefined') {
                 content = screen - header - footer - contentCurrent;
 
             $('#main-body.ui-content').css('min-height', content + 'px');
-
-            JSV.resizeViewer();
         },
 
         /**
