@@ -172,6 +172,15 @@ if (typeof JSV === 'undefined') {
                 }
             });
 
+            //setup example links
+            $('.load-example').each(function(idx, link) {
+                var ljq = $(link);
+                ljq.on('click', function(evt) {
+                    evt.preventDefault();
+                    JSV.loadInputExample(link.href, ljq.data('target'));
+                });
+            });
+
             //setup controls
             d3.selectAll('#zoom-controls>a').on('click', JSV.zoomClick);
             d3.select('#tree-controls>a#reset-tree').on('click', JSV.resetViewer);
@@ -438,6 +447,17 @@ if (typeof JSV === 'undefined') {
             }
 
             return p;
+        },
+
+        /**
+         * Load an example in the specified input field.
+         */
+        loadInputExample: function(uri, target) {
+            $.getJSON(uri).done(function(fetched) {
+                $('#' + target).val(JSON.stringify(fetched, null, '  '));
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                JSV.showError('Failed to load example: ' + errorThrown);
+            });
         },
 
         /**

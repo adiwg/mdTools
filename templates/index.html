@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>ADIwg mdJSON Schema Viewer <!-- @echo version --></title>
+    <title>ADIwg mdTools <!-- @echo version --></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="styles/json-schema-viewer<!-- @if NODE_ENV='PRODUCTION' -->.min<!-- @endif -->.css" />
@@ -119,6 +119,7 @@
                 <div class="ui-block-a section">
                     <label for="textarea-json">JSON to Validate:</label>
                     <textarea cols="40" rows="15" name="textarea-json" id="textarea-json" placeholder="Enter your JSON or Drag-n-Drop a file here..."></textarea>
+                    <a class="load-example" href="schemas/examples/minimum_example.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
                 </div>
                 <div class="ui-block-b section">
                     <label for="file-upload">Upload File:</label>
@@ -151,12 +152,13 @@
             </div>
         </div>
         <div role="main" class="ui-content">
-                <form id="translation-form" name="translation-form" action="http://mdtranslator.herokuapp.com/api/v1/translator">
+                <form id="translation-form" name="translation-form" action="http://mdtranslator.adiwg.org/api/v1/translator">
 
             <div class="ui-grid-a ui-responsive">
                     <div class="ui-block-a section">
                         <label for="textarea-translator">Input to <b>Translate:</b></label>
                         <textarea cols="40" rows="15" name="file" id="textarea-translator" placeholder="Enter your text or Drag-n-Drop a file here..."></textarea>
+                        <a class="load-example" href="schemas/examples/minimum_example.json" data-target="textarea-translator" data-prefetch="true">Load Example</a>
                     </div>
                     <div class="ui-block-b section">
                         <label for="file-upload">Upload File:</label>
@@ -172,6 +174,7 @@
                             <label for="select-writer" class="select">Writer:</label>
                             <select name="writer" id="select-writer" data-native-menu="false">
                                 <option value="" data-placeholder="true">Choose a Writer...</option>
+                                <option value="">None</option>
                                 <option value="iso19115_2">ISO 19115-2</option>
                                 <option value="iso19110">ISO 19110</option>
                             </select>
