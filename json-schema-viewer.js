@@ -172,6 +172,20 @@ if (typeof JSV === 'undefined') {
                 }
             });
 
+            //scroll example/schema when tab is activated
+            $('#info-panel').on( 'tabsactivate', function( event, ui ) {
+                var id = ui.newPanel.attr('id');
+
+                if(id === 'info-tab-example' || id === 'info-tab-schema') {
+                    var pre = ui.newPanel.find('pre'),
+                        highEl = pre.find('span.highlight')[0];
+
+                    if(highEl) {
+                        pre.scrollTo(highEl, 900);
+                    }
+                }
+            });
+
             //setup example links
             $('.load-example').each(function(idx, link) {
                 var ljq = $(link);
@@ -431,6 +445,13 @@ if (typeof JSV === 'undefined') {
             }
             el.append(pre);
             pre.height(el.height() - btn.outerHeight(true) - (pre.outerHeight(true) - pre.height()));
+
+            //scroll to highlighted property
+            var highEl = pre.find('span.highlight')[0];
+
+            if(highEl) {
+                pre.scrollTo(highEl, 900);
+            }
         },
 
         /**

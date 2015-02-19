@@ -66,3 +66,5 @@ styles/*.css
 /lib/jquery
 /lib/uri.js
 /lib/d3
+/lib/jquery.scrollTo
+

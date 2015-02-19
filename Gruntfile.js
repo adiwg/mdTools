@@ -231,6 +231,7 @@ module.exports = function(grunt) {
                         //'./lib/uri.js/jquery.URI.js',
                         './lib/tv4/tv4.js',
                         './lib/tv4.async-load-jquery.js',
+                        './lib/jquery.scrollTo/jquery.scrollTo.js',
                         './lib/d3/d3.js',
                         './lib/filereader/filereader.js',
                         './lib/jsonpointer/src/jsonpointer.js',
