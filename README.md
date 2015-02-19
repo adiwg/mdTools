@@ -1,4 +1,4 @@
-mdJSON Schema Viewer
+mdTools
 ==================
 
 JavaScript tool for visualizing [json-schemas](http://json-schema.org/), includes validator and support for the [mdTranslator](https://github.com/adiwg/mdTranslator) via the [API](http://mdtranslator.adiwg.org/).
