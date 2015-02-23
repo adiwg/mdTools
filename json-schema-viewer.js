@@ -1046,7 +1046,12 @@ if (typeof JSV === 'undefined') {
                     return d.name + (d.require ? '*' : '');
                 })
                 .style('fill-opacity', 0)
-                .on('click', JSV.clickTitle);
+                .on('click', JSV.clickTitle)
+                .on('dblclick', function(d) {
+                    JSV.click(d);
+                    JSV.clickTitle(d);
+                    d3.event.stopPropagation();
+                });
 
 
             // Change the circle fill depending on whether it has children and is collapsed
