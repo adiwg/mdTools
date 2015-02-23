@@ -2,6 +2,7 @@
   "name": "bower",
   "dependencies": {
     "d3": "~3",
-    "uri.js": "~1.14.1"
+    "uri.js": "~1.14.1",
+    "jquery.scrollTo": "~1.4.14"
   }
 }

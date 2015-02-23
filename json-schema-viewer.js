@@ -26,6 +26,11 @@ if (typeof JSV === 'undefined') {
         focusNode: false,
 
         /**
+         * Currently loaded example
+         */
+        example: false,
+
+        /**
          * @property {object} treeData The diagram nodes
          */
         treeData: null,
@@ -100,6 +105,20 @@ if (typeof JSV === 'undefined') {
             $(document).on('pagecontainertransition', this.contentHeight);
             $(window).on('throttledresize orientationchange', this.contentHeight);
             $(window).on('resize', this.contentHeight);
+
+            //responsive buttons
+            var resizeBtn = function() {
+                var activePage = $.mobile.pageContainer.pagecontainer('getActivePage');
+                if ($(window).width() <= 800) {
+                    $('.md-navbar .md-flex-btn.ui-btn-icon-left', activePage).toggleClass('ui-btn-icon-notext ui-btn-icon-left');
+                } else {
+                    $('.md-navbar .md-flex-btn.ui-btn-icon-notext', activePage).toggleClass('ui-btn-icon-left ui-btn-icon-notext');
+                }
+            };
+
+            resizeBtn();
+            $(document).on('pagecontainerbeforeshow', resizeBtn);
+            $(window).on('throttledresize', resizeBtn);
 
             var cb = function() {
                 callback();
@@ -198,6 +217,10 @@ if (typeof JSV === 'undefined') {
             //setup controls
             d3.selectAll('#zoom-controls>a').on('click', JSV.zoomClick);
             d3.select('#tree-controls>a#reset-tree').on('click', JSV.resetViewer);
+
+            $('#sharelink').on('click', function () {
+               $(this).select();
+            });
 
             JSV.viewerInit = true;
 
@@ -403,19 +426,39 @@ if (typeof JSV === 'undefined') {
             var example = (!node.example && node.parent && node.parent.example && node.parent.type === 'object' ? node.parent.example : node.example);
 
             if(example) {
-                $.getJSON(node.schema.match( /^(.*?)(?=[^\/]*\.json)/g ) + example, function(data) {
-                    var pointer = example.split('#')[1];
+                if(example !== JSV.example) {
+                    $.getJSON(node.schema.match( /^(.*?)(?=[^\/]*\.json)/g ) + example, function(data) {
+                        var pointer = example.split('#')[1];
 
-                    if(pointer) {
-                        data = jsonpointer.get(data, pointer);
+                        if(pointer) {
+                            data = jsonpointer.get(data, pointer);
+                        }
+
+                        JSV.createPre(ex, data, false, node.plainName);
+                        JSV.example = example;
+                    }).fail(function() {
+                        ex.html('<h3>No example found.</h3>');
+                        JSV.example = false;
+                    });
+                } else {
+                    var pre = ex.find('pre'),
+                        highEl;
+
+                    pre.find('span.highlight').removeClass('highlight');
+
+                    if(node.plainName) {
+                        pre.highlight(node.plainName, 'highlight', true);
                     }
+                    //scroll to highlighted property
+                    highEl = pre.find('span.highlight')[0];
 
-                    JSV.createPre(ex, data, false, node.plainName);
-                }).fail(function() {
-                    ex.html('<h3>No example found.</h3>');
-                });
+                    if (highEl) {
+                        pre.scrollTo(highEl, 900);
+                    }
+                }
             } else {
                 ex.html('<h3>No example available.</h3>');
+                JSV.example = false;
             }
         },
 
