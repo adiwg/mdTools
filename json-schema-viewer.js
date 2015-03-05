@@ -149,12 +149,13 @@ if (typeof JSV === 'undefined') {
                     if(page.jqmData('infoOpen')) {
                         $('#info-panel'). panel('open');
                     }
-                    //TODO: add this to 'pagecontainercreate' handler on refactor
+                    //TODO: add this to 'pagecontainercreate' handler on refactor???
+                    JSV.contentHeight();
                     if($('svg#jsv-tree').height() === 0) {
                         $('svg#jsv-tree').attr('width', $('#main-body').width())
                                          .attr('height', $('#main-body').height());
                         JSV.resizeViewer();
-                        //JSV.resetViewer();
+                        JSV.resetViewer();
 
                     }
 

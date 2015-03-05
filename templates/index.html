@@ -26,7 +26,8 @@
 
             </div>
             <h1 id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></h1>
-            <a class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#help-panel"  title="Toggle Help">Help</a>
+            <!-- <a class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#help-panel"  title="Toggle Help">Help</a> -->
+            <a data-rel="popup" data-position-to="window" class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#popup-welcome"  title="Show Info">Info</a>
         </div><!-- /header -->
         <div  role="main" class="ui-content" id="main-body">
             <div id="zoom-controls">
@@ -114,6 +115,7 @@
                 <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                 <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
             </div>
+            <a data-rel="popup" data-position-to="window" class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#popup-welcome"  title="Show Info">Info</a>
         </div>
         <div role="main" class="ui-content">
             <div class="ui-grid-a ui-responsive">
@@ -151,6 +153,7 @@
             <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
             <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
             </div>
+            <a data-rel="popup" data-position-to="window" class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#popup-welcome"  title="Show Info">Info</a>
         </div>
         <div role="main" class="ui-content">
                 <form id="translation-form" name="translation-form" action="http://mdtranslator.adiwg.org/api/v1/translator">
@@ -216,13 +219,53 @@
         </div>
     </div>
 
-    <div id="popup-error" data-theme="a" data-overlay-theme="b">
+    <div id="popup-error" data-history="false" data-theme="a" data-overlay-theme="b">
         <div data-role="header" data-theme="a">
             <h1>Error!</h1>
         </div>
         <p class="ui-content error-message">
             If you see this, something went wrong.
         </p>
+    </div>
+
+    <div id="popup-welcome" data-role="popup" data-history="false" data-theme="a" data-overlay-theme="b">
+        <div data-role="header" data-theme="b">
+            <h1>mdTools</h1>
+        </div>
+        <div class="ui-content">
+                <p>
+                    mdTools is an interface for <a href="http://www.adiwg.org">ADIwg</a> metadata tools.
+                    The purpose of these tools is to assist with the production of metadata, especially ISO-compliant
+                    metadata.
+                </p>
+                <hr />
+                <ul>
+                    <li>
+                        <h3>mdJSON Schema Viewer</h3>
+                        <p>
+                            Interactive documenatation tool for the <a href="https://github.com/adiwg/mdJson-schemas">ADIwg mdJSON schemas</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>mdJSON Validator</h3>
+                        <p>
+                            A tool to validate a metadata file using the mdJSON schemas.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>mdTranslator</h3>
+                        <p>
+                            A tool that converts between metadata standards. For example, from mdJSON to ISO 19139.
+                            The tool is powered by the <a href="http://mdtranslator.adiwg.org/">mdTranslator webservice</a>.
+                        </p>
+                    </li>
+                </ul>
+                <hr />
+                <div id="welcome-footer">
+                    <a href="https://github.com/adiwg" class="ui-btn ui-btn-inline ui-icon-github ui-btn-icon-left">Check us out on GitHub!</a>
+                </div>
+
+            </div>
     </div>
 
     <script type='text/javascript' src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
