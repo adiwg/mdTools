@@ -628,6 +628,7 @@ if (typeof JSV === 'undefined') {
             node = {
                 description: schema.description || s.description,
                 name: (schema.$ref && real ? name : false) || s.title || name || 'schema',
+                isReal: real,
                 plainName: name,
                 type: s.type,
                 displayType: s.type || (s['enum'] ? 'enum: ' + s['enum'].join(', ') : s.items ? 'array' : s.properties ? 'object' : 'ambiguous'),
