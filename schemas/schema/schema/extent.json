@@ -57,7 +57,7 @@
       "type": "object",
       "example": "../../examples/full_example.json#/metadata/resourceInfo/extent/0/temporalElement/timeInstant/0",
       "required": ["timePosition"],
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "id": {
           "type": "string",
@@ -85,7 +85,7 @@
       "type": "object",
       "description": "A span of time represented by a start date/time and an ending date/time.",
       "example": "../../examples/full_example.json#/metadata/resourceInfo/extent/0/temporalElement/timePeriod/0",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "id": {
           "type": "string",
@@ -135,7 +135,7 @@
       "translation": {
         "ISO 19115-2": ["EX_Extent > temporalElement > EX_TemporalExtent"]
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "minProperties": 1,
       "properties": {
         "timeInstant": {
@@ -176,7 +176,7 @@
       "translation": {
         "ISO 19115-2": ["EX_Extent > verticalElement > EX_VerticalExtent "]
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": ["minimumValue", "maximumValue", "verticalCRSTitle", "verticalCRSUri"],
       "properties": {
         "minimumValue": {

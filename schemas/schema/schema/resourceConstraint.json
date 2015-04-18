@@ -28,7 +28,7 @@
       "translation": {
         "ISO 19115-2": ["MD_LegalConstraints"]
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "accessConstraint": {
           "type": "array",
@@ -72,7 +72,7 @@
         "ISO 19115-2": ["MD_SecurityConstraints"]
       },
       "required": ["classification"],
-      "additionalProperties": true,
+      "additionalProperties": false,
       "properties": {
         "classification": {
           "type": "string",
