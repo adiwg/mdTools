@@ -568,6 +568,8 @@ if (typeof JSV === 'undefined') {
 
             JSV.update(JSV.treeData);
             JSV.centerNode(node);
+
+            return node;
         },
 
         /**
