@@ -56,12 +56,18 @@ p.ui-content.error-message {
   left: 10px;
 }
 
-#legend {
+#legend-container {
   width: 200px;
   position: absolute;
   right: 20px;
   top: 15px;
   font-size: .9em;
+
+  #search-result {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 15em;
+  }
 }
 
 .node {

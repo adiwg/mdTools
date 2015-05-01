@@ -122,6 +122,21 @@ if (typeof JSV === 'undefined') {
 
             var cb = function() {
                 callback();
+
+                //setup search
+                var items = [];
+
+                JSV.visit(JSV.treeData, function(me) {
+                    if (me.isReal) {
+                        items.push(me.plainName + '|' + JSV.getNodePath(me).join('-'));
+                    }
+                }, function(me) {
+                    return me.children || me._children;
+                });
+
+                items.sort();
+                JSV.buildSearchList(items);
+
                 $('#loading').fadeOut('slow');
             };
             JSV.createDiagram(cb);
@@ -546,7 +561,8 @@ if (typeof JSV === 'undefined') {
                 parent = node.parent;
 
             if(parent) {
-                p.unshift(parent.children.indexOf(node));
+    var children = parent.children || parent._children;
+    p.unshift(children.indexOf(node));
                 return JSV.getNodePath(parent, p);
             } else {
                 return p;
@@ -571,6 +587,42 @@ if (typeof JSV === 'undefined') {
             JSV.centerNode(node);
 
             return node;
+        },
+
+        /**
+         * Build Search.
+         */
+        buildSearchList: function(items) {
+            var ul = $('ul#search-result');
+
+            $.each(items, function(i,v) {
+                var data = v.split('|');
+                var li = $('<li/>').attr('data-icon', 'false').appendTo(ul);
+
+                $('<a/>').attr('data-path', data[1]).text(data[0]).appendTo(li);
+            });
+
+            ul.filterable('refresh');
+
+            ul.on('click', function(e) {
+                var path = $(e.target).attr('data-path');
+                var node = JSV.expandNodePath(path.split('-'));
+
+                JSV.flashNode(node);
+            });
+
+        },
+
+        /**
+         * Flash node text
+         */
+        flashNode: function(node, times) {
+            var t = times || 4,
+            text = $('#n-' + node.id + ' text');
+            //flash node text
+            while (t--) {
+                text.fadeTo(350, 0).fadeTo(350, 1);
+            }
         },
 
         /**
