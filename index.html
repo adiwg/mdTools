@@ -37,9 +37,14 @@
                     <a id="reset-tree" href="#" class="ui-btn ui-icon-refresh ui-btn-icon-notext ui-corner-all" title="Reset">Reset</a>
                 </div>
             </div>
-            <div id="legend" data-role="collapsible" data-collapsed="false">
-                <h3 class="ui-mini">Legend</h3>
-                <div id="legend-items"></div>
+            <div id="legend-container">
+                <div id="legend" data-role="collapsible" data-collapsed="false">
+                    <h3 class="ui-mini">Legend</h3>
+                    <div id="legend-items"></div>
+                </div>
+                <input type="text" data-type="search" placeholder="Search..." id="search-input">
+                <ul id="search-result" data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#search-input" data-inset="true">
+                </ul>
             </div>
         </div>
         <div data-role="footer">
