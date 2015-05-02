@@ -167,7 +167,7 @@
     },
     "graphicOverview": {
       "type": "array",
-      "description": "A browse graphic associated with the resource in which to gain an at-a-glance referencing for the resource, such as geographic location and extent.",
+      "description": "Provides a path or link to images, maps, flow charts, models, etc. that illustrate the resource.",
       "translation": {
         "ISO 19115-2": ["MD_DataIdentification > graphicOverview > MD_BrowseGraphic"]
       },
@@ -184,6 +184,7 @@
       "properties": {
         "useLimitation": {
           "type": "array",
+          "description": "Limitation affecting the fitness for use of the resource or metadata. For example, \"not to be used for navigation\".",
           "example": "../../examples/full_example.json#/metadata/resourceInfo/constraint",
           "translation": {
             "ISO 19115-2": ["MD_DataIdentification > resourceConstraints > MD_Constraints[useLimitation]"]
@@ -194,6 +195,7 @@
         },
         "legalConstraint": {
           "type": "array",
+          "description": "Restrictions and legal prerequisites for accessing and using the resource or metadata.",
           "example": "../../examples/full_example.json#/metadata/resourceInfo/constraint/legalConstraint",
           "translation": {
             "ISO 19115-2": ["MI_Metadata > resourceConstraints > MD_LegalConstraints"]
@@ -204,6 +206,7 @@
         },
         "securityConstraint": {
           "type": "array",
+          "description": "Handling restrictions imposed on the resource or metadata for national security or similar security concerns.",
           "example": "../../examples/full_example.json#/metadata/resourceInfo/constraint/securityConstraint",
           "translation": {
             "ISO 19115-2": ["MI_Metadata > resourceConstraints > MD_SecurityConstraints"]
@@ -275,7 +278,7 @@
     },
     "extent": {
       "type": "array",
-      "description": "Information about the geographic extent of the resource. A resource may have multiple extents.",
+      "description": "Information about the geographic, vertical, and temporal extent of the resource. A resource may have multiple extents.",
       "translation": {
         "ISO 19115-2": ["MD_DataIdentification > extent > EX_Extent"]
       },
@@ -285,7 +288,7 @@
     },
     "dataQualityInfo": {
       "type": "array",
-      "description": "Information about the quality of the resource.",
+      "description": "Information that describes the data quality, lineage, and/or processing steps that were applied to the whole or part of the data resource.",
       "translation": {
         "ISO 19115-2": ["MI_Metadata > dataQualityInfo > DQ_DataQuality"],
         "FGDC CSDGM": ["dataqual"]

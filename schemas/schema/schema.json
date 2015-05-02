@@ -1,7 +1,7 @@
 {
   "id": "schema.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "schema for ADIwg mdJSON metadata",
   "type": "object",
   "required": ["version", "contact", "metadata"],
@@ -34,6 +34,10 @@
     },
     "dataDictionary": {
       "type": "array",
+      "description": "A description of the contents, format and structure of the physical objects in a data resource.",
+      "translation": {
+        "ISO 19115-2": ["FC_FeatureCatalogue"]
+      },
       "example": "../examples/full_example.json#/dataDictionary",
       "items": {
         "$ref": "schema/dataDictionary.json"
