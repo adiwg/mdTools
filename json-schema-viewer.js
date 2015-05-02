@@ -561,8 +561,9 @@ if (typeof JSV === 'undefined') {
                 parent = node.parent;
 
             if(parent) {
-    var children = parent.children || parent._children;
-    p.unshift(children.indexOf(node));
+                var children = parent.children || parent._children;
+
+                p.unshift(children.indexOf(node));
                 return JSV.getNodePath(parent, p);
             } else {
                 return p;
