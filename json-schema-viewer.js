@@ -358,6 +358,10 @@ if (typeof JSV === 'undefined') {
         showValResult: function(result) {
             var cont = $('#validation-results'), ui;
 
+            if(cont.children().length) {
+                cont.css('opacity', 0);
+            }
+
             if(result.valid) {
                 cont.html('<p class=ui-content>JSON is valid!</p>');
             } else {
@@ -379,6 +383,8 @@ if (typeof JSV === 'undefined') {
             $('#validator-page').animate({
                 scrollTop: $('#validation-results').offset().top + 20
             }, 1000);
+
+            cont.fadeTo(350, 1);
         },
 
         /**
