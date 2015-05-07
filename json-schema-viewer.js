@@ -135,7 +135,7 @@ if (typeof JSV === 'undefined') {
                 });
 
                 items.sort();
-                JSV.buildSearchList(items);
+                JSV.buildSearchList(items, true);
 
                 $('#loading').fadeOut('slow');
             };
@@ -593,7 +593,7 @@ if (typeof JSV === 'undefined') {
         /**
          * Build Search.
          */
-        buildSearchList: function(items) {
+        buildSearchList: function(items, init) {
             var ul = $('ul#search-result');
 
             $.each(items, function(i,v) {
@@ -603,6 +603,9 @@ if (typeof JSV === 'undefined') {
                 $('<a/>').attr('data-path', data[1]).text(data[0]).appendTo(li);
             });
 
+            if(init) {
+              ul.filterable();
+            }
             ul.filterable('refresh');
 
             ul.on('click', function(e) {
