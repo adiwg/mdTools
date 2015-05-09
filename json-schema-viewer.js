@@ -501,6 +501,7 @@ if (typeof JSV === 'undefined') {
                 hljs.highlightBlock($(w.document.body).children('pre')[0]);
                 $(w.document.body).append('<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">');
                 w.document.title = title || 'JSON Schema Viewer';
+                w.document.close();
             });
 
             el.html(btn);
