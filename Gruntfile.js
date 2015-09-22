@@ -367,6 +367,11 @@ module.exports = function(grunt) {
                         src : './templates/latest.html',
                         dest : './prod/index.html',
 
+                    }, {
+
+                        src : './CNAME',
+                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/CNAME',
+
                     },
 
                 ],
