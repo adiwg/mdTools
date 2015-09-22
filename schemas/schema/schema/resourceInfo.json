@@ -61,7 +61,7 @@
       "type": "string",
       "description": "Status of the resource.",
       "translation": {
-        "ISO 19115-2": ["MD_DataIdentification > status [MD_ProgressCode]"],
+        "ISO 19115-2": ["MD_DataIdentification > status"],
         "FGDC CSDGM": ["idinfo > status > progress"]
       }
     },
@@ -78,16 +78,6 @@
       "description": "Language(s) used within the resource. Should be a valid ISO 639-3 code.",
       "translation": {
         "ISO 19115-2": ["MD_DataIdentification > language"]
-      },
-      "items": {
-        "type": "string"
-      }
-    },
-    "characterSet": {
-      "type": "array",
-      "description": "Full name of the character encoding standard used by the resource.",
-      "translation": {
-        "ISO 19115-2": ["MD_DataIdentification > characterSet [MD_CharacterSetCode]"]
       },
       "items": {
         "type": "string"

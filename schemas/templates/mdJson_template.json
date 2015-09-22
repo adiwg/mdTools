@@ -1,7 +1,7 @@
 {
   "version": {
     "name": "mdJson",
-    "version": "1.0.2"
+    "version": "1.0.0"
   },
   "contact": [
     {
@@ -171,7 +171,6 @@
       "hasMapLocation": true,
       "hasDataAvailable": true,
       "language": [""],
-      "characterSet": [""],
       "purpose": "",
       "credit": [""],
       "topicCategory": [""],
