@@ -12,7 +12,7 @@
     "eqeqeq"        : false,    // If === should be required.
     "eqnull"        : false,    // If == null comparisons should be tolerated.
     "es3"           : true,     // If ES3 syntax should be allowed.
-    "esnext"        : false,    // If es.next specific syntax should be allowed.
+    "esnext"        : true,    // If es.next specific syntax should be allowed.
     "evil"          : false,    // If eval should be allowed.
     "expr"          : false,    // If ExpressionStatement should be allowed as Programs.
     "forin"         : true,     // If for in statements must filter.
