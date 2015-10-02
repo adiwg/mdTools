@@ -3,6 +3,8 @@
   "dependencies": {
     "d3": "~3",
     "uri.js": "~1.14.1",
-    "jquery.scrollTo": "~1.4.14"
+    "jquery.scrollTo": "~1.4.14",
+    "json-schema-viewer": "~0",
+    "mdjson-schemas": "~1"
   }
 }
