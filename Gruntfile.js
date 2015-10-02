@@ -402,6 +402,16 @@ module.exports = function(grunt) {
                         ],
                         dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 
+                    },
+                    {
+
+                        expand : true,
+                        cwd : './',
+                        src : [
+                            'CNAME',
+                        ],
+                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+
                     }
 
                 ],
