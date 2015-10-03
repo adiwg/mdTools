@@ -1,0 +1,58 @@
+@import 'loader';
+@import '../../bower_components/json-schema-viewer/styles/sass/json-schema-viewer';
+
+        /*****Translator*****/
+#textarea-translator {
+  height: auto !important;
+  overflow-y: auto;
+}
+
+#translator-page {
+  background-color: #DEF0F9;
+
+  #translation-results {
+    display: none;
+    overflow: hidden;
+    background-color: #F4F8F9;
+    padding: 1em;
+
+    pre {
+      width: 98%;
+      margin: auto;
+      overflow: auto;
+      background-color: #FFF;
+      padding: 10px;
+    }
+
+    &.error {
+      background-color: $error-color;
+    }
+
+    &.valid {
+      background-color: $valid-color;
+    }
+  }
+
+}
+
+#translator-page {
+  height: 100%;
+}
+
+#translator-page .section {
+  padding: 1em;
+}
+
+#translator-page .drag {
+  background-color: #CBFF8B;
+}
+
+      /*****Buttons******/
+.ui-icon-translate:after {
+  background-image: url("../images/translate_white.png");
+  background-size: 20px 20px;
+}
+
+@import '../../bower_components/json-schema-viewer/styles/sass/highlight';
+@import '../../bower_components/json-schema-viewer/styles/sass/welcome';
+@import 'logo';
