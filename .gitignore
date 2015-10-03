@@ -61,6 +61,7 @@ prod
 index.html
 dev.html
 styles/*.css
+styles/*.map
 .grunt
 bower_components
 

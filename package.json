@@ -1,18 +1,18 @@
 {
-  "title": "JSON Schema Viewer",
-  "name": "json-schema-viewer",
-  "description": "Visualize JSON schemas using D3.js",
+  "title": "mdJSON Schema Viewer",
+  "name": "mdtools",
+  "description": "Visualize mdJSON schemas using D3.js",
   "version": "0.1.0",
-  "homepage": "https://github.com/adiwg/mdJson-schema-viewer",
+  "homepage": "https://github.com/adiwg/mdTools",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adiwg/mdJson-schema-viewer.git"
+    "url": "https://github.com/adiwg/mdTools.git"
   },
   "author": {
     "name": "Josh Bradley"
   },
   "//": "The following FQDN is the endpoint for your assets (no trailing slash):",
-  "production": "http://www.adiwg.org/mdJson-schema-viewer",
+  "production": "http://www.adiwg.org/mdTools",
   "licenses": [
     {
       "type": "Unlicense",
@@ -36,10 +36,10 @@
   "scripts": {
     "dev": "grunt",
     "prod": "grunt prod",
-    "watch": "grunt watch",
-    "bower": "grunt bower"
+    "watch": "grunt watch"
   },
   "devDependencies": {
+    "grunt-contrib-connect": "^0.11.2",
     "grunt-gh-pages": "^0.9.1"
   }
 }

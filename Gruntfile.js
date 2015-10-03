@@ -82,7 +82,7 @@ module.exports = function(grunt) {
          * @see http://bower.io/
          */
 
-        bower : {
+        /*bower : {
 
             install : {
 
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 
             },
 
-        },
+        },*/
 
         /*----------------------------------( WATCH )----------------------------------*/
 
@@ -114,7 +114,6 @@ module.exports = function(grunt) {
             files : [
 
                 '<%= jshint.init %>',
-                './json-schema-viewer.js',
                 './lib/**/*',
                 './lib/*',
                 './templates/**/*',
@@ -147,10 +146,7 @@ module.exports = function(grunt) {
             init : [
 
                 './Gruntfile.js',
-                './json-schema-viewer.js',
                 './lib/translator.js',
-                './lib/tv4.async-load-jquery.js',
-
             ],
 
         },
@@ -227,16 +223,16 @@ module.exports = function(grunt) {
                     './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/<%= pkg.name %>.min.js' : [
                         //'./files/scripts/jquery.js',
                         //'./files/scripts/jquery.*.js',
-                        './lib/uri.js/URI.js',
+                        './bower_components/uri.js/src/URI.js',
                         //'./lib/uri.js/jquery.URI.js',
-                        './lib/tv4/tv4.js',
-                        './lib/tv4.async-load-jquery.js',
-                        './lib/jquery.scrollTo/jquery.scrollTo.js',
-                        './lib/d3/d3.js',
-                        './lib/filereader/filereader.js',
-                        './lib/jsonpointer/src/jsonpointer.js',
-                        './lib/highlightjs/highlight.min.js',
-                        './<%= pkg.name %>.js',
+                        './bower_components/tv4/tv4.js',
+                        './bower_components/json-schema-viewer/lib/tv4.async-load-jquery.js',
+                        './bower_components/jquery.scrollTo/jquery.scrollTo.js',
+                        './bower_components/d3/d3.js',
+                        './bower_components/filereader.js/filereader.js',
+                        './bower_components/jsonpointer.js/src/jsonpointer.js',
+                        './bower_components/highlightjs/highlight.pack.js',
+                        './bower_components/json-schema-viewer/json-schema-viewer.js',
                         './lib/translator.js',
                     ],
 
@@ -367,12 +363,7 @@ module.exports = function(grunt) {
                         src : './templates/latest.html',
                         dest : './prod/index.html',
 
-                    }, {
-
-                        src : './CNAME',
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/CNAME',
-
-                    },
+                    }
 
                 ],
 
@@ -402,10 +393,30 @@ module.exports = function(grunt) {
                         cwd : './',
                         src : [
                             'images/**/*',
-                            'schemas/**/*.json',
                             '!images/junk/**',
                         ],
                         dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+
+                    },
+                    {
+
+                        expand : true,
+                        cwd : './bower_components/mdjson-schemas/',
+                        src : [
+                            '**/*.json',
+                            '!*bower.json',
+                        ],
+                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/schemas',
+
+                    },
+                    {
+
+                        expand : true,
+                        cwd : './bower_components/json-schema-viewer/lib/',
+                        src : [
+                            'preinit.js',
+                        ],
+                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/lib',
 
                     },
                     {
@@ -438,11 +449,26 @@ module.exports = function(grunt) {
         src: ['**/*']
       },
 
+      /**
+       * Start a static web server. Use <code>grunt connect:server:keepalive</code>
+       * for a persistent server instance. Default port is <b>9001</b>.
+       *
+       * @see https://github.com/gruntjs/grunt-contrib-connect
+       */
+
+      connect: {
+        server: {
+          options: {
+            port: 9001
+          }
+        }
+      },
+
     });
 
     /*----------------------------------( TASKS )----------------------------------*/
 
-    grunt.loadNpmTasks('grunt-bower-task');
+    //grunt.loadNpmTasks('grunt-bower-task');
 
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -462,6 +488,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-gh-pages');
 
+    grunt.loadNpmTasks('grunt-contrib-connect');
     //----------------------------------
 
     /**
