@@ -19,13 +19,14 @@
             <div data-role="header" class="md-navbar">
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#info-panel" title="Toggle Info">Menu</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Viewer">
+                        <span id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></span>
+                    </a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
-                    <!--<a href="#" class="ui-btn ui-btn-icon-right ui-icon-plus ui-btn-icon-notext ui-corner-all">Zoom-in</a>
-                    <a href="#" class="ui-btn ui-btn-icon-right ui-icon-minus ui-btn-icon-notext ui-corner-all">Zoom-out</a>-->
-
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
-                <h1 id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></h1>
+                <span class="ui-title"></span>
                 <!-- <a class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#help-panel"  title="Toggle Help">Help</a> -->
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div><!-- /header -->
@@ -116,11 +117,15 @@
 
         <div data-role="page" id="validator-page"  data-title="ADIwg mdJSON Validator">
             <div data-role="header" class="md-navbar">
-                <h1>mdJSON Validator <span class="schema-version"></span></h1>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-check ui-btn-icon-left ui-corner-all" href="#validator-page"  title="Validator">
+                        mdJSON Validator <span class="schema-version"></span>
+                    </a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
+                <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content">
@@ -154,11 +159,15 @@
 
         <div data-role="page" id="translator-page" data-title="ADIwg mdTranslator">
             <div data-role="header" class="md-navbar">
-                <h1>mdTranslator</h1>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Translator">
+                        mdTranslator
+                    </a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
+                <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content">
@@ -227,8 +236,38 @@
                 </div>
             </div>
         </div>
+        <div data-role="page" id="codes-page" class="ui-responsive-panel" data-title="ADIwg mdCodes">
+            <div data-display="push" data-role="panel" id="codes-panel" data-swipe-close=false>
+                <div><ul id="codelist" data-role="listview">
+                    <script id="codelist-template" type="x-tmpl-mustache">
+                        {{#codelists}}
+                        <li>
+                            <a href="#">{{ . }}</a>
+                        </li>
+                        {{/codelists}}
+                    </script>
+                </ul>
+                </div>
+            </div>
+            <div data-role="header" class="md-navbar">
+                <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
+                    <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#codes-panel" title="Toggle Codes Menu">Menu</a>
+                    <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
+                    <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-bullets ui-btn-icon-left ui-corner-all" href="#codes-page"  title="Codes">
+                        mdCodes
+                    </a>
+                </div>
+                <span class="ui-title"></span>
+                <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
+            </div>
+            <div role="main" class="ui-content">
 
-        <div id="popup-error" data-history="false" data-theme="a" data-overlay-theme="b">
+            </div>
+        </div>
+
+        <div id="popup-error" data-role="popup" data-history="false" data-theme="a" data-overlay-theme="b">
             <div data-role="header" data-theme="a">
                 <h1>Error!</h1>
             </div>
@@ -300,6 +339,7 @@
           //set schema location
           JSV.schema = '/bower_components/mdjson-schemas/schema/schema.json';
         </script>
+        <script type='text/javascript' src="lib/modules.js"></script>
         <script type='text/javascript' src="lib/translator.js"></script>
         <!-- @endif -->
         <!-- @if NODE_ENV='PRODUCTION' -->

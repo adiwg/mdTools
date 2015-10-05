@@ -53,6 +53,31 @@
   background-size: 20px 20px;
 }
 
-@import '../../bower_components/json-schema-viewer/styles/sass/highlight';
-@import '../../bower_components/json-schema-viewer/styles/sass/welcome';
+//override JQM active button background
+.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head+body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
+    background-color: #00A3DA;
+}
+
+//@import '../../bower_components/json-schema-viewer/styles/sass/highlight';
+//@import '../../bower_components/json-schema-viewer/styles/sass/welcome';
 @import 'logo';
+
+//bug fixes
+html {
+  overflow: auto;
+  height: 100%;
+}
+body {
+  overflow: hidden;
+}
+
+#jsv-svg {
+  display: block;
+}
+
+div[data-role=page] {
+  display: none;
+}
+#loading div {
+  padding-top: 5em;
+}
