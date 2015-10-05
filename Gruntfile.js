@@ -233,6 +233,7 @@ module.exports = function(grunt) {
                         './bower_components/jsonpointer.js/src/jsonpointer.js',
                         './bower_components/highlightjs/highlight.pack.js',
                         './bower_components/json-schema-viewer/json-schema-viewer.js',
+                        './lib/modules.js',
                         './lib/translator.js',
                     ],
 
@@ -464,6 +465,22 @@ module.exports = function(grunt) {
         }
       },
 
+      /**
+       * Browserify node modules
+       *
+       * @see https://github.com/jmreidy/grunt-browserify
+       */
+
+      browserify: {
+        main: {
+          browserifyOptions: {
+            debug: true
+          },
+          src: 'lib/main.js',
+          dest: 'lib/modules.js'
+        }
+      },
+
     });
 
     /*----------------------------------( TASKS )----------------------------------*/
@@ -489,6 +506,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.loadNpmTasks('grunt-contrib-connect');
+
+    grunt.loadNpmTasks('grunt-browserify');
     //----------------------------------
 
     /**
