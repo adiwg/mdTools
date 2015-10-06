@@ -61,23 +61,3 @@
 //@import '../../bower_components/json-schema-viewer/styles/sass/highlight';
 //@import '../../bower_components/json-schema-viewer/styles/sass/welcome';
 @import 'logo';
-
-//bug fixes
-html {
-  overflow: auto;
-  height: 100%;
-}
-body {
-  overflow: hidden;
-}
-
-#jsv-svg {
-  display: block;
-}
-
-div[data-role=page] {
-  display: none;
-}
-#loading div {
-  padding-top: 5em;
-}
