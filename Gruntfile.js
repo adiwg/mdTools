@@ -147,6 +147,8 @@ module.exports = function(grunt) {
 
                 './Gruntfile.js',
                 './lib/translator.js',
+                './lib/main.js',
+                './lib/preinit.js',
             ],
 
         },
@@ -266,7 +268,7 @@ module.exports = function(grunt) {
 
                 options : {
 
-                    banner : '<%= banner.long %>',
+                    //banner : '<%= banner.long %>',
                     style : 'expanded', // Output style. Can be nested, compact, compressed, expanded.
 
                 },
@@ -521,7 +523,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('init', ['jshint',]);
 
-    grunt.registerTask('dev', ['init', 'env:dev', 'sass:dev', 'preprocess:dev',]);
+    grunt.registerTask('dev', ['init', 'env:dev', 'browserify', 'sass:dev', 'preprocess:dev',]);
 
     grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
 
