@@ -39,7 +39,7 @@
     "multistr"      : false,    // Allow multiline strings.
     "newcap"        : true,     // If constructor names must be capitalized.
     "noarg"         : true,     // If arguments.caller and arguments.callee should be disallowed.
-    "node"          : false,    // If the Node.js environment globals should be predefined.
+    "node"          : true,    // If the Node.js environment globals should be predefined.
     "noempty"       : true,     // If empty blocks should be disallowed.
     "nomen"         : false,    // If names should be checked.
     "nonew"         : true,     // If using `new` for side-effects should be disallowed.
