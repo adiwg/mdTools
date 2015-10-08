@@ -19,13 +19,14 @@
             <div data-role="header" class="md-navbar">
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#info-panel" title="Toggle Info">Menu</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Viewer">
+                        <span id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></span>
+                    </a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
-                    <!--<a href="#" class="ui-btn ui-btn-icon-right ui-icon-plus ui-btn-icon-notext ui-corner-all">Zoom-in</a>
-                    <a href="#" class="ui-btn ui-btn-icon-right ui-icon-minus ui-btn-icon-notext ui-corner-all">Zoom-out</a>-->
-
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
-                <h1 id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></h1>
+                <span class="ui-title"></span>
                 <!-- <a class="ui-btn-right ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all" href="#help-panel"  title="Toggle Help">Help</a> -->
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div><!-- /header -->
@@ -116,11 +117,15 @@
 
         <div data-role="page" id="validator-page"  data-title="ADIwg mdJSON Validator">
             <div data-role="header" class="md-navbar">
-                <h1>mdJSON Validator <span class="schema-version"></span></h1>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-check ui-btn-icon-left ui-corner-all" href="#validator-page"  title="Validator">
+                        mdJSON Validator <span class="schema-version"></span>
+                    </a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
+                <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content">
@@ -154,11 +159,15 @@
 
         <div data-role="page" id="translator-page" data-title="ADIwg mdTranslator">
             <div data-role="header" class="md-navbar">
-                <h1>mdTranslator</h1>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Translator">
+                        mdTranslator
+                    </a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
+                <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content">
@@ -227,8 +236,110 @@
                 </div>
             </div>
         </div>
+        <div data-role="page" id="codes-page" class="ui-responsive-panel" data-title="ADIwg mdCodes">
+            <div data-display="push" data-role="panel" id="mdcodes-panel" data-swipe-close=false>
+                <ul id="mdcodes-panel-list" data-role="listview" data-filter="true" data-filter-placeholder="Search List" data-inset="true">
+                    <script id="codelists-template" type="x-tmpl-mustache">
+                        {{#codelists}}
+                        <li>
+                            <a href="#" data-codelist="{{ key }}">{{ name }}</a>
+                        </li>
+                        {{/codelists}}
+                    </script>
+                </ul>
+            </div>
+            <div data-role="header" class="md-navbar">
+                <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
+                    <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#mdcodes-panel" title="Toggle Codes Menu">Menu</a>
+                    <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
+                    <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
+                    <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-bullets ui-btn-icon-left ui-corner-all" href="#codes-page"  title="Codes">
+                        mdCodes
+                    </a>
+                </div>
+                <span class="ui-title"></span>
+                <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
+            </div>
+            <div role="main" class="ui-content" id="mdcodes-detail">
+                <h2 class="center-text">
+                    <a class="ui-btn ui-btn-inline ui-corner-all ui-icon-bars ui-btn-icon-notext md-header-btn" href="#mdcodes-panel" title="Toggle Codes Menu"></a>
+                    Pick a codelist from the menu.
+                </h2>
+            </div>
+            <script id="codelist-template" type="x-tmpl-mustache">
+                {{#codelist}}
+                <div class="ui-corner-all mdsection-corners mdtable-md">
+                    <div class="ui-bar ui-bar-a">
+                        <h3>CodeList</h3>
+                    </div>
+                    <div class="ui-body ui-body-a">
+                        <table data-role="table" id="mdcodes-header-table" data-mode="reflow" class="ui-table ui-table-reflow">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Source</th>
+                                    <th>Source Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ codelist.codelistName }}</td>
+                                    <td>{{ codelist.source }}</td>
+                                    <td>{{ codelist.sourceName }}</td>
+                                    <td>{{ codelist.description }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-role="tabs">
+                    <div class="navbar" data-role="navbar">
+                        <ul>
+                            <li>
+                                <a href="#mdcodes-tab-1" class="ui-btn-active">Table</a>
+                            </li>
+                            <li>
+                                <a href="#mdcodes-tab-2">JSON</a>
+                            </li>
+                            <li>
+                                <a href="#mdcodes-tab-3">CSV</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mdcodes-tab-1" class="ui-body ui-body-a">
+                        <table id="mdcodes-table-1" data-role="table" id="mdcodes-header-table" data-mode="columntoggle" class="ui-responsive table-stroke">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Code Name</th>
+                                    <th data-priority="3">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#codelist.codelist}}
+                                <tr>
+                                    <td>{{ code }}</td>
+                                    <td>{{ codeName }}</td>
+                                    <td>{{ description }}</td>
+                                </tr>
+                                {{/codelist.codelist}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="mdcodes-tab-2" class="ui-body ui-body-a">
+                        <pre><code>{{ json }}</code></pre>
+                    </div>
+                    <div id="mdcodes-tab-3" class="ui-body ui-body-a">
+                        <pre><code>{{ csv }}</code></pre>
+                    </div>
+                </div>
+                {{/codelist}}
+            </script>
+        </div>
 
-        <div id="popup-error" data-history="false" data-theme="a" data-overlay-theme="b">
+        <div id="popup-error" data-role="popup" data-history="false" data-theme="a" data-overlay-theme="b">
             <div data-role="header" data-theme="a">
                 <h1>Error!</h1>
             </div>
