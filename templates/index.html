@@ -237,12 +237,12 @@
             </div>
         </div>
         <div data-role="page" id="codes-page" class="ui-responsive-panel" data-title="ADIwg mdCodes">
-            <div data-display="push" data-role="panel" id="codes-panel" data-swipe-close=false>
-                <ul id="codelist" data-role="listview">
-                    <script id="codelist-template" type="x-tmpl-mustache">
+            <div data-display="push" data-role="panel" id="mdcodes-panel" data-swipe-close=false>
+                <ul id="mdcodes-panel-list" data-role="listview">
+                    <script id="codelists-template" type="x-tmpl-mustache">
                         {{#codelists}}
                         <li>
-                            <a href="#">{{ . }}</a>
+                            <a href="#" data-codelist="{{ key }}">{{ name }}</a>
                         </li>
                         {{/codelists}}
                     </script>
@@ -250,7 +250,7 @@
             </div>
             <div data-role="header" class="md-navbar">
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
-                    <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#codes-panel" title="Toggle Codes Menu">Menu</a>
+                    <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#mdcodes-panel" title="Toggle Codes Menu">Menu</a>
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
@@ -261,9 +261,83 @@
                 <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
-            <div role="main" class="ui-content">
-
+            <div role="main" class="ui-content" id="mdcodes-detail">
+                <h2 class="center-text">Pick a codelist from the menu.</h2>
             </div>
+            <script id="codelist-template" type="x-tmpl-mustache">
+                {{#codelist}}
+                <div class="ui-corner-all mdsection-corners mdtable-md">
+                    <div class="ui-bar ui-bar-a">
+                        <h3>CodeList</h3>
+                    </div>
+                    <div class="ui-body ui-body-a">
+                        <table data-role="table" id="mdcodes-header-table" data-mode="reflow" class="ui-table ui-table-reflow">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Source</th>
+                                    <th>Source Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ codelist.codelistName }}</td>
+                                    <td>{{ codelist.source }}</td>
+                                    <td>{{ codelist.sourceName }}</td>
+                                    <td>{{ codelist.description }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-role="tabs">
+                    <div class="navbar" data-role="navbar">
+                        <ul>
+                            <li>
+                                <a href="#mdcodes-tab-1" class="ui-btn-active">Table</a>
+                            </li>
+                            <li>
+                                <a href="#mdcodes-tab-2">JSON</a>
+                            </li>
+                            <li>
+                                <a href="#mdcodes-tab-3">CSV</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mdcodes-tab-1" class="ui-body ui-body-a">
+                        <table data-role="table" id="mdcodes-header-table" data-mode="columntoggle" class="ui-responsive table-stroke">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Code Name</th>
+                                    <th data-priority="1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#codelist.codelist}}
+                                <tr>
+                                    <td>{{ code }}</td>
+                                    <td>{{ codeName }}</td>
+                                    <td>{{ description }}</td>
+                                </tr>
+                                {{/codelist.codelist}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="mdcodes-tab-2" class="ui-body ui-body-a">
+                        <p>
+                            This is the content of the tab 'Two', with the id  mdcodes-tab-2.
+                        </p>
+                    </div>
+                    <div id="mdcodes-tab-3" class="ui-body ui-body-a">
+                        <p>
+                            This is the content of the tab 'Three', with the id  mdcodes-tab-3.
+                        </p>
+                    </div>
+                </div>
+                {{/codelist}}
+            </script>
         </div>
 
         <div id="popup-error" data-role="popup" data-history="false" data-theme="a" data-overlay-theme="b">
