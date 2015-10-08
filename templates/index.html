@@ -238,7 +238,7 @@
         </div>
         <div data-role="page" id="codes-page" class="ui-responsive-panel" data-title="ADIwg mdCodes">
             <div data-display="push" data-role="panel" id="mdcodes-panel" data-swipe-close=false>
-                <ul id="mdcodes-panel-list" data-role="listview">
+                <ul id="mdcodes-panel-list" data-role="listview" data-filter="true" data-filter-placeholder="Search List" data-inset="true">
                     <script id="codelists-template" type="x-tmpl-mustache">
                         {{#codelists}}
                         <li>
@@ -262,7 +262,10 @@
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content" id="mdcodes-detail">
-                <h2 class="center-text">Pick a codelist from the menu.</h2>
+                <h2 class="center-text">
+                    <a class="ui-btn ui-btn-inline ui-corner-all ui-icon-bars ui-btn-icon-notext md-header-btn" href="#mdcodes-panel" title="Toggle Codes Menu"></a>
+                    Pick a codelist from the menu.
+                </h2>
             </div>
             <script id="codelist-template" type="x-tmpl-mustache">
                 {{#codelist}}
@@ -306,12 +309,12 @@
                         </ul>
                     </div>
                     <div id="mdcodes-tab-1" class="ui-body ui-body-a">
-                        <table data-role="table" id="mdcodes-header-table" data-mode="columntoggle" class="ui-responsive table-stroke">
+                        <table id="mdcodes-table-1" data-role="table" id="mdcodes-header-table" data-mode="columntoggle" class="ui-responsive table-stroke">
                             <thead>
                                 <tr>
                                     <th>Code</th>
                                     <th>Code Name</th>
-                                    <th data-priority="1">Description</th>
+                                    <th data-priority="3">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -326,14 +329,10 @@
                         </table>
                     </div>
                     <div id="mdcodes-tab-2" class="ui-body ui-body-a">
-                        <p>
-                            This is the content of the tab 'Two', with the id  mdcodes-tab-2.
-                        </p>
+                        <pre><code>{{ json }}</code></pre>
                     </div>
                     <div id="mdcodes-tab-3" class="ui-body ui-body-a">
-                        <p>
-                            This is the content of the tab 'Three', with the id  mdcodes-tab-3.
-                        </p>
+                        <pre><code>{{ csv }}</code></pre>
                     </div>
                 </div>
                 {{/codelist}}

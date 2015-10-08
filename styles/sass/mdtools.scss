@@ -49,18 +49,47 @@
   background-color: #CBFF8B;
 }
 
+
 /*****Codes******/
-#mdcodes-detail .ui-tabs {
-  margin-top: 2em;
+.md-header-btn.ui-btn.ui-corner-all {
+  border-radius: .3125em;
+  padding: .25em;
+  margin: 0;
+}
+
+#mdcodes-detail {
+
+  #mdcodes-tab-2, #mdcodes-tab-3 {
+    overflow-x: auto;
+  }
+
+  .ui-tabs {
+    margin-top: 2em;
+
+    tr:hover {
+      background-color: #EDFFD8;
+    }
+  }
+
+  .ui-tabs-nav, .mdtable-md {
+    max-width: 40em;
+
+    a {
+      border-bottom: 0;
+    }
+  }
+
 }
 
 .mdsection-corners {
+
   .ui-bar {
     -webkit-border-top-left-radius: inherit;
     border-top-left-radius: inherit;
     -webkit-border-top-right-radius: inherit;
     border-top-right-radius: inherit;
   }
+
   .ui-body {
     border-top-width: 0;
     -webkit-border-bottom-left-radius: inherit;
@@ -74,12 +103,6 @@
   }
 }
 
-.mdtable-md, #mdcodes-detail .ui-tabs-nav {
-  max-width: 40em;
-}
-#mdcodes-detail .ui-tabs-nav a {
-  border-bottom: 0;
-}
 
 /*****Buttons******/
 .ui-icon-translate:after {
