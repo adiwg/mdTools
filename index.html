@@ -19,9 +19,7 @@
             <div data-role="header" class="md-navbar">
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext" href="#info-panel" title="Toggle Info">Menu</a>
-                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Viewer">
-                        <span id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></span>
-                    </a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Viewer"> <span id="viewer-title">mdJSON Schema Viewer<span class="schema-version"></span></span> </a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
@@ -41,12 +39,10 @@
                 <div id="legend-container">
                     <div id="legend" data-role="collapsible" data-collapsed="false">
                         <h3 class="ui-mini">Legend</h3>
-                        <div id="legend-items">
-                        </div>
+                        <div id="legend-items"></div>
                     </div>
                     <input type="text" data-type="search" placeholder="Search..." id="search-input">
-                    <ul id="search-result" data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#search-input" data-inset="true">
-                    </ul>
+                    <ul id="search-result" data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#search-input" data-inset="true"></ul>
                 </div>
             </div>
             <div data-role="footer">
@@ -119,9 +115,7 @@
             <div data-role="header" class="md-navbar">
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
-                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-check ui-btn-icon-left ui-corner-all" href="#validator-page"  title="Validator">
-                        mdJSON Validator <span class="schema-version"></span>
-                    </a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-check ui-btn-icon-left ui-corner-all" href="#validator-page"  title="Validator"> mdJSON Validator <span class="schema-version"></span> </a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
@@ -152,8 +146,7 @@
                 <button id="button-validate" class="ui-btn ui-icon-check ui-btn-icon-bottom">
                     Validate!
                 </button>
-                <div id="validation-results" class="ui-responsive">
-                </div>
+                <div id="validation-results" class="ui-responsive"></div>
             </div>
         </div>
 
@@ -162,9 +155,7 @@
                 <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left">
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
-                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Translator">
-                        mdTranslator
-                    </a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Translator"> mdTranslator </a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-bullets ui-btn-icon-left" href="#codes-page" title="Go to Codes">Codes</a>
                 </div>
                 <span class="ui-title"></span>
@@ -232,8 +223,7 @@
                 <div id="trans-loader" data-theme="a">
                     <h3>Translating...</h3>
                 </div>
-                <div id="translation-results" class="ui-responsive">
-                </div>
+                <div id="translation-results" class="ui-responsive"></div>
             </div>
         </div>
         <div data-role="page" id="codes-page" class="ui-responsive-panel" data-title="ADIwg mdCodes">
@@ -241,9 +231,9 @@
                 <ul id="mdcodes-panel-list" data-role="listview" data-filter="true" data-filter-placeholder="Search List" data-inset="true">
                     <script id="codelists-template" type="x-tmpl-mustache">
                         {{#codelists}}
-                        <li>
-                            <a href="#" data-codelist="{{ key }}">{{ name }}</a>
-                        </li>
+                            <li>
+                                <a href="#" data-codelist="{{ key }}">{{ name }}</a>
+                            </li>
                         {{/codelists}}
                     </script>
                 </ul>
@@ -254,18 +244,13 @@
                     <a class="ui-btn md-flex-btn ui-icon-eye ui-btn-icon-left ui-corner-all" href="#viewer-page"  title="Go to Viewer">Viewer</a>
                     <a class="ui-btn md-flex-btn ui-corner-all ui-icon-check ui-btn-icon-left" href="#validator-page" title="Go to Validator">Validator</a>
                     <a class="ui-btn md-flex-btn ui-icon-translate ui-btn-icon-left ui-corner-all" href="#translator-page"  title="Go to Translator">Translator</a>
-                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-bullets ui-btn-icon-left ui-corner-all" href="#codes-page"  title="Codes">
-                        mdCodes
-                    </a>
+                    <a class="ui-btn ui-btn-active md-flex-btn ui-icon-bullets ui-btn-icon-left ui-corner-all" href="#codes-page"  title="Codes"> mdCodes </a>
                 </div>
                 <span class="ui-title"></span>
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content" id="mdcodes-detail">
-                <h2 class="center-text">
-                    <a class="ui-btn ui-btn-inline ui-corner-all ui-icon-bars ui-btn-icon-notext md-header-btn" href="#mdcodes-panel" title="Toggle Codes Menu"></a>
-                    Pick a codelist from the menu.
-                </h2>
+                <h2 class="center-text"><a class="ui-btn ui-btn-inline ui-corner-all ui-icon-bars ui-btn-icon-notext md-header-btn" href="#mdcodes-panel" title="Toggle Codes Menu"></a> Pick a codelist from the menu. </h2>
             </div>
             <script id="codelist-template" type="x-tmpl-mustache">
                 {{#codelist}}
@@ -309,7 +294,7 @@
                         </ul>
                     </div>
                     <div id="mdcodes-tab-1" class="ui-body ui-body-a">
-                        <table id="mdcodes-table-1" data-role="table" id="mdcodes-header-table" data-mode="columntoggle" class="ui-responsive table-stroke">
+                        <table id="mdcodes-table-1" data-role="table" data-mode="columntoggle" class="ui-responsive table-stroke">
                             <thead>
                                 <tr>
                                     <th>Code</th>
@@ -378,6 +363,13 @@
                         <p>
                             A tool that converts between metadata standards. For example, from mdJSON to ISO 19139.
                             The tool is powered by the <a href="http://mdtranslator.adiwg.org/">mdTranslator webservice</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>mdCodes Viewer</h3>
+                        <p>
+                            View <a href="https://github.com/adiwg/mdCodes">mdCodes</a>
+                            in HTML table, JSON, or CSV formats.
                         </p>
                     </li>
                 </ul>
