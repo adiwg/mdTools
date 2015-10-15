@@ -51,6 +51,10 @@
 
 
 /*****Codes******/
+#codes-page .ui-panel-wrapper {
+  overflow: auto;
+}
+
 .md-header-btn.ui-btn.ui-corner-all {
   border-radius: .3125em;
   padding: .25em;
