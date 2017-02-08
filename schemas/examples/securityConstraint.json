@@ -1,0 +1,13 @@
+{
+   "constraint": [
+      {
+         "type": "security",
+         "securityConstraint": {
+            "classification": "classification",
+            "classificationSystem": "classificationSystem",
+            "userNote": "userNote",
+            "handlingDescription": "handlingDescription"
+         }
+      }
+   ]
+}
