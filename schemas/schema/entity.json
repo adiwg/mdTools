@@ -6,7 +6,7 @@
   "translation": {
     "ISO 19115-2": ["FC_FeatureCatalogue > featureType > FC_FeatureType"]
   },
-  "example": "",
+  "example": "../examples/entity.json",
   "required": ["codeName", "definition"],
   "additionalProperties": true,
   "properties": {
@@ -84,13 +84,15 @@
       "translation": {
         "ISO 19115-2": ["Note: the foreign key is written as a text description into FC_FeatureCatalogue > featureType > FC_FeatureType > constrainedBy > FC_Constraint"]
       },
-      "items": {}
+      "items": {
+        "$ref": "#/definitions/foreignKey"
+      }
     }
   },
   "definitions": {
     "index": {
       "type": "object",
-      "example": "",
+      "example": "../examples/entityIndex.json",
       "required": ["codeName", "allowDuplicates", "attributeCodeName"],
       "additionalProperties": true,
       "properties": {
@@ -121,9 +123,8 @@
       }
     },
     "attribute": {
-
       "type": "object",
-      "example": "",
+      "example": "../examples/entityAttribute.json",
       "required": ["codeName", "dataType", "definition", "allowNull"],
       "additionalProperties": true,
       "properties": {
@@ -172,8 +173,7 @@
         "allowMany": {
           "type": "boolean",
           "description": "Indicates whether null values are allowed for the attribute",
-          "translation": {
-          }
+          "translation": {}
         },
         "units": {
           "type": "string",
@@ -198,7 +198,7 @@
     },
     "foreignKey": {
       "type": "object",
-      "example": "",
+      "example": "../examples/entityForeignKey.json",
       "required": ["localAttributeCodeName", "referencedEntityCodeName", "referencedAttributeCodeName"],
       "additionalProperties": true,
       "properties": {
