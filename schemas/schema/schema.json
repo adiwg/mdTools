@@ -1,28 +1,14 @@
 {
   "id": "schema.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "version": "2.0.0-alpha.7",
+  "version": "2.0.0-alpha.8",
   "description": "schema for ADIwg mdJSON metadata",
   "example": "../examples/mdJson.json",
   "type": "object",
   "required": ["schema", "contact", "metadata"],
   "properties": {
     "schema": {
-      "type": "object",
-      "description": "Identifies the version of the JSON schema standard that applies to the metadata.",
-      "required": ["name", "version"],
-      "additionalProperties": true,
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Schema identifier, i.e. the name of the schema standard."
-        },
-        "version": {
-          "type": "string",
-          "description": "Specific version number of the schema standard.",
-          "pattern": "[0-9]\\.[0-9]\\.[0-9]"
-        }
-      }
+      "$ref": "#/definitions/schema"
     },
     "contact": {
       "type": "array",
@@ -53,6 +39,25 @@
       "example": "../examples/dataDictionary.json",
       "items": {
         "$ref": "dataDictionary.json"
+      }
+    }
+  },
+  "definitions": {
+    "schema": {
+      "type": "object",
+      "description": "Identifies the version of the JSON schema standard that applies to the metadata.",
+      "required": ["name", "version"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Schema identifier, i.e. the name of the schema standard."
+        },
+        "version": {
+          "type": "string",
+          "description": "Specific version number of the schema standard.",
+          "pattern": "[0-9]\\.[0-9]\\.[0-9]"
+        }
       }
     }
   }
