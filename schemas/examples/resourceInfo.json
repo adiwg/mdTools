@@ -23,29 +23,39 @@
   ],
   "pointOfContact": [{
     "role": "role",
-    "timePeriod": [{
-      "startDateTime": "2016-10-14"
+    "roleExtent": [{
+      "temporalExtent": [{
+        "type": "period",
+        "timePeriod": {
+          "startDateTime": "2016-10-24T11:10:15.2-10:00"
+        }
+      }]
     }],
     "party": [{
       "contactId": "individualId0"
     }]
   }, {
     "role": "role2",
-    "timePeriod": [{
-      "startDateTime": "2016-10-14"
+    "roleExtent": [{
+      "temporalExtent": [{
+        "type": "period",
+        "timePeriod": {
+          "startDateTime": "2016-10-24T11:10:15.2-10:00"
+        }
+      }]
     }],
     "party": [{
       "contactId": "individualId0"
     }]
   }],
   "spatialReferenceSystem": [{
-    "type": "referenceSystemType0",
-    "systemIdentifier": {
+    "referenceSystemType": "referenceSystemType0",
+    "referenceSystemIdentifier": {
       "identifier": "identifier"
     }
   }, {
-    "type": "referenceSystemType1",
-    "systemIdentifier": {
+    "referenceSystemType": "referenceSystemType1",
+    "referenceSystemIdentifier": {
       "identifier": "identifier"
     }
   }],
