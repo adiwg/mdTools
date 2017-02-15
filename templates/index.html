@@ -270,7 +270,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{ codelist.codelistName }}</td>
+                                    <td>{{ codelist.codelistName }}
+                                      <a class="small-text" href="#codelink-{{ codelist.codelistName }}-popup" id="permalink" data-rel="popup">Link</a>
+                                      <div data-role="popup" id="codelink-{{ codelist.codelistName }}-popup" class="ui-content" data-arrow="true">
+                                          <label for="codelink">Share:</label>
+                                          <input type="text" id="codelink" style="min-width:300px;" value="{{ uri }}{{ codelist.codelistName }}" data-theme="a">
+                                      </div>
                                     <td>{{ codelist.source }}</td>
                                     <td>{{ codelist.sourceName }}</td>
                                     <td>{{ codelist.description }}</td>
