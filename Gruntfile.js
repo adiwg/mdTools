@@ -38,7 +38,7 @@ module.exports = function(grunt) {
             'short' : '/*! ' +
                       '<%= pkg.title || pkg.name %>' +
                       '<%= pkg.version ? " v" + pkg.version : "" %>' +
-                      '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
+                      '<%= pkg.licenses ? " | " + _.map(pkg.licenses, "type").join(", ") : "" %>' +
                       ' - For included libraries, see source for additional licensing info.' +
                       '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
                       ' */',
@@ -286,7 +286,7 @@ module.exports = function(grunt) {
 
                 options : {
 
-                    banner : '<%= banner.short %>',
+                    //banner : '<%= banner.short %>',
                     style : 'compressed',
 
                 },
@@ -415,7 +415,7 @@ module.exports = function(grunt) {
                     {
 
                         expand : true,
-                        cwd : './bower_components/json-schema-viewer/lib/',
+                        cwd : './lib/',
                         src : [
                             'preinit.js',
                         ],
@@ -425,9 +425,11 @@ module.exports = function(grunt) {
                     {
 
                         expand : true,
+                        flatten: true,
                         cwd : './',
                         src : [
                             'CNAME',
+                            'images/favicon.ico'
                         ],
                         dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 

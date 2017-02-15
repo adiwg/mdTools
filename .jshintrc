@@ -75,6 +75,7 @@
     "yui"           : false,    // YUI variables should be predefined.
     "globals"       : {         // A map of global variables, with keys as names and a boolean value to determine if they are assignable.
         "JSV": true,
+        "JSON": true,
         "URI": true,
         "d3": false,
         "tv4": false,
