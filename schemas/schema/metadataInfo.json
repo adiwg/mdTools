@@ -32,14 +32,6 @@
         "$ref": "locale.json"
       }
     },
-    "scope": {
-      "type": "array",
-      "description": "The scope/type of resource for which metadata is provided.",
-      "translation": {},
-      "items": {
-        "$ref": "./scope.json#"
-      }
-    },
     "metadataContact": {
       "type": "array",
       "description": "Person or organization responsible for metadata information (metadata custodian).",
@@ -62,7 +54,21 @@
       "minItems": 1,
       "items": {
         "$ref": "common.json#/definitions/dateObject"
-      }
+      },
+      "allOf": [{
+        "type": "array",
+        "items": [{
+          "type": "object",
+          "title": "Creation date required.",
+          "description": "A creation date must be the first object in the array.",
+          "properties": {
+            "dateType": {
+              "type": "string",
+              "enum": ["creation"]
+            }
+          }
+        }]
+      }]
     },
     "metadataOnlineResource": {
       "type": "array",
