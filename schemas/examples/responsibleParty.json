@@ -1,7 +1,7 @@
  [{
    "role": "role",
    "roleExtent": [{
-     "temporalExtent": [{       
+     "temporalExtent": [{
        "timePeriod": {
          "id": "id",
          "description": "description",
@@ -17,7 +17,7 @@
          "endDateTime": "2016-12-31",
          "timeInterval": {
            "interval": 9.9,
-           "units": "units"
+           "units": "year"
          },
          "duration": {
            "years": 1,

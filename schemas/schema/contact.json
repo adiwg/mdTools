@@ -9,7 +9,7 @@
   "example": "../examples/contact.json",
   "type": "object",
   "title": "contact",
-  "required": ["contactId", "name", "isOrganization"],
+  "required": ["contactId", "isOrganization"],
   "additionalProperties": true,
   "properties": {
     "contactId": {
@@ -122,6 +122,31 @@
       "description": "User defined contact type."
     }
   },
+  "oneOf": [{
+    "title": "name is required for organization",
+    "required": ["name"],
+    "properties": {
+      "isOrganization": {
+        "title": "isOrganization is true",
+        "enum": [true]
+      }
+    }
+  }, {
+    "title": "name or positionName is required for individual",
+    "properties": {
+      "isOrganization": {
+        "title": "isOrganization is false",
+        "enum": [false]
+      }
+    },
+    "anyOf": [{
+      "title": "name is required",
+      "required": ["name"]
+    }, {
+      "title": "positionName is required",
+      "required": ["positionName"]
+    }]
+  }],
   "definitions": {
     "phone": {
       "type": "object",
