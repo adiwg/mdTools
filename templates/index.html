@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
         <link rel="stylesheet" href="styles/mdtools<!-- @if NODE_ENV='PRODUCTION' -->.min<!-- @endif -->.css" />
-
+        <link rel="shortcut icon"
+         href="/favicon.ico" />
     </head>
     <body>
         <div id="loading">
@@ -127,7 +128,7 @@
                     <div class="ui-block-a section">
                         <label for="textarea-json">JSON to Validate:</label>
                         <textarea cols="40" rows="15" name="textarea-json" id="textarea-json" placeholder="Enter your JSON or Drag-n-Drop a file here..."></textarea>
-                        <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/minimum_example.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
+                        <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/mdJson.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
                     </div>
                     <div class="ui-block-b section">
                         <label for="file-upload">Upload File:</label>
