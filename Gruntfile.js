@@ -404,6 +404,16 @@ module.exports = function(grunt) {
                     {
 
                         expand : true,
+                        cwd : './',
+                        src : [
+                            'assets/**/*',
+                        ],
+                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+
+                    },
+                    {
+
+                        expand : true,
                         cwd : './bower_components/mdjson-schemas/',
                         src : [
                             '**/*.json',
