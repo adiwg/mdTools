@@ -169,7 +169,8 @@
                         <div class="ui-block-a section">
                             <label for="textarea-translator">Input to <b>Translate:</b></label>
                             <textarea cols="40" rows="15" name="file" id="textarea-translator" placeholder="Enter your text or Drag-n-Drop a file here..."></textarea>
-                            <a class="load-example" href="schemas/examples/mdJson.json" data-target="textarea-translator" data-prefetch="true">Load Example</a>
+                            <a class="load-example" href="schemas/examples/mdJson.json" data-target="textarea-translator" data-prefetch="true">Load mdJSON Example</a>
+                            <a class="load-example" href="assets/sbJSON.json" data-target="textarea-translator" data-prefetch="true">Load sbJSON Example</a>
                         </div>
                         <div class="ui-block-b section">
                             <label for="file-upload">Upload File:</label>
@@ -181,6 +182,7 @@
                                 <select name="reader" id="select-reader" data-native-menu="false">
                                     <option value="" data-placeholder="true">Choose a Reader...</option>
                                     <option value="mdJson">ADIwg mdJSON</option>
+                                    <option value="sbJson">ScienceBase sbJSON</option>
                                 </select>
                                 <label for="select-writer" class="select">Writer:</label>
                                 <select name="writer" id="select-writer" data-native-menu="false">
@@ -190,7 +192,7 @@
                                     <option value="iso19110">ISO 19110</option>
                                     <option value="html">HTML</option>
                                     <option value="mdJson">mdJSON</option>
-                                    <option value="sbJson">sbJSON(beta)</option>
+                                    <option value="sbJson">sbJSON</option>
                                 </select>
                             </div>
                             <div class="ui-field-contain">
