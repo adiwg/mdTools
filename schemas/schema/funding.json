@@ -3,7 +3,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "description": "",
-  "required": [],
   "minProperties": 1,
   "additionalProperties": true,
   "anyOf": [{
@@ -27,6 +26,10 @@
       "$ref": "./timePeriod.json#",
       "description": "The period for which the allocation is relevant.",
       "example": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "Information describing the funding."
     }
   },
   "definitions": {
@@ -36,6 +39,10 @@
       "required": ["amount", "currency"],
       "additionalProperties": true,
       "properties": {
+        "sourceAllocationId": {
+          "type": "string",
+          "description": "Identifier used by the source contact to reference the allocation."
+        },
         "amount": {
           "type": "number",
           "description": "The amount of the allocation in the indicated currency."
@@ -60,6 +67,13 @@
         "comment": {
           "type": "string",
           "description": "Additional information relevant to the allocation."
+        },
+        "onlineResource": {
+          "type": "array",
+          "description": "On-line information related to the allocation.",
+          "items": {
+            "$ref": "onlineResource.json#"
+          }
         }
       }
     }
