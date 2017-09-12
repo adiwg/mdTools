@@ -5,6 +5,7 @@
   "title": "",
   "description": "",
   "example":"../examples/attribute.json",
+  "required": [],
   "dependencies": {
     "minValue": ["units"],
     "maxValue": ["units"],

@@ -8,13 +8,7 @@
    }, {
      "title": "title"
    }],
-   "spatialResolution": {
-     "measure": {
-       "type": "distance",
-       "value": 99.9,
-       "unitOfMeasure": "unitOfMeasure"
-     }
-   },
+   "scaleDenominator": 9,
    "referenceSystem": {
      "referenceSystemType": "referenceSystemType",
      "referenceSystemIdentifier": {
