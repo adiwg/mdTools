@@ -226,6 +226,7 @@ module.exports = function(grunt) {
                         //'./files/scripts/jquery.js',
                         //'./files/scripts/jquery.*.js',
                         './bower_components/uri.js/src/URI.js',
+                        './bower_components/file-saver/FileSaver.js',
                         //'./lib/uri.js/jquery.URI.js',
                         './bower_components/tv4/tv4.js',
                         './bower_components/json-schema-viewer/lib/tv4.async-load-jquery.js',

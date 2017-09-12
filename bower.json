@@ -9,6 +9,7 @@
     "mdjson-schemas": "~2.2.0",
     "filereader.js": "https://github.com/bgrins/filereader.js.git#107f68c3b99d7ec0f3cba9c0baabfb03067650b5",
     "highlightjs": "https://github.com/jlblcc/jlb-highlightjs.git",
-    "mdcodes": "~2.3.0"
+    "mdcodes": "~2.3.0",
+    "file-saver": "^1.3.3"
   }
 }
