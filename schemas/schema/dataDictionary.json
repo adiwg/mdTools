@@ -53,11 +53,6 @@
     },
     "dictionaryFormat": {
       "type": "string",
-      "description": "DEPRECATED in favor of dictionaryFunctionalLanguage.",
-      "deprecated": true
-    },
-    "dictionaryFunctionalLanguage": {
-      "type": "string",
       "description": "Formal functional language used in the dictionary.",
       "translation": {}
     },
@@ -65,7 +60,7 @@
       "type": "boolean",
       "description": "Indication of whether or not the data dictionary is included with the resource.",
       "translation": {
-        "ISO 19115-3": ["MD_FeatureCatalogueDescription > includedWithDataset"]
+        "ISO 19115-2": ["MD_FeatureCatalogueDescription > includedWithDataset"]
       },
       "default": false
     },

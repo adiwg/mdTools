@@ -6,10 +6,7 @@
     "domainItem": [{
         "name": "name0",
         "value": "value0",
-        "definition": "definition0",
-        "reference":{
-          "title": "domainReference"
-        }
+        "definition": "definition0"
       },
       {
         "name": "name1",
