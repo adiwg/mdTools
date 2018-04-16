@@ -288,32 +288,77 @@
                   "geographicElement": [{
                     "type": "Feature",
                     "id": "polygon-75",
-                    "bbox": [-10.0, -10.0, 10.0, 10.0],
+                    "bbox": [-10.0, -10.0,
+                      10.0,
+                      10.0
+                    ],
                     "geometry": {
                       "type": "Polygon",
                       "coordinates": [
                         [
-                          [-161.74223, 67.663378],
-                          [-161.440345, 67.630173],
-                          [-161.294611, 67.656257],
-                          [-161.228063, 67.625736],
-                          [-161.247712, 67.585909],
-                          [-161.334662, 67.591324],
-                          [-161.566245, 67.491263],
-                          [-161.812338, 67.455299],
-                          [-161.825019, 67.40123],
-                          [-162.128301, 67.414364],
-                          [-162.167825, 67.363047],
-                          [-162.383403, 67.293329],
-                          [-162.633432, 67.272237],
-                          [-162.645587, 67.356665],
-                          [-162.369023, 67.455264],
-                          [-162.287324, 67.551235],
-                          [-162.171139, 67.559356],
-                          [-161.99344, 67.646806],
-                          [-161.857964, 67.620329],
-                          [-161.769431, 67.629407],
-                          [-161.74223, 67.663378]
+                          [-161.74223,
+                            67.663378
+                          ],
+                          [-161.440345,
+                            67.630173
+                          ],
+                          [-161.294611,
+                            67.656257
+                          ],
+                          [-161.228063,
+                            67.625736
+                          ],
+                          [-161.247712,
+                            67.585909
+                          ],
+                          [-161.334662,
+                            67.591324
+                          ],
+                          [-161.566245,
+                            67.491263
+                          ],
+                          [-161.812338,
+                            67.455299
+                          ],
+                          [-161.825019,
+                            67.40123
+                          ],
+                          [-162.128301,
+                            67.414364
+                          ],
+                          [-162.167825,
+                            67.363047
+                          ],
+                          [-162.383403,
+                            67.293329
+                          ],
+                          [-162.633432,
+                            67.272237
+                          ],
+                          [-162.645587,
+                            67.356665
+                          ],
+                          [-162.369023,
+                            67.455264
+                          ],
+                          [-162.287324,
+                            67.551235
+                          ],
+                          [-162.171139,
+                            67.559356
+                          ],
+                          [-161.99344,
+                            67.646806
+                          ],
+                          [-161.857964,
+                            67.620329
+                          ],
+                          [-161.769431,
+                            67.629407
+                          ],
+                          [-161.74223,
+                            67.663378
+                          ]
                         ]
                       ]
                     },
@@ -494,40 +539,91 @@
                   },
                   "geographicElement": [{
                       "type": "Point",
-                      "coordinates": [100.0, 0.0]
+                      "coordinates": [
+                        100.0,
+                        0.0
+                      ]
                     },
                     {
                       "type": "LineString",
                       "coordinates": [
-                        [100.0, 0.0],
-                        [101.0, 1.0]
+                        [
+                          100.0,
+                          0.0
+                        ],
+                        [
+                          101.0,
+                          1.0
+                        ]
                       ]
                     },
                     {
                       "type": "Polygon",
                       "coordinates": [
                         [
-                          [-161.74223, 67.663378],
-                          [-161.440345, 67.630173],
-                          [-161.294611, 67.656257],
-                          [-161.228063, 67.625736],
-                          [-161.247712, 67.585909],
-                          [-161.334662, 67.591324],
-                          [-161.566245, 67.491263],
-                          [-161.812338, 67.455299],
-                          [-161.825019, 67.40123],
-                          [-162.128301, 67.414364],
-                          [-162.167825, 67.363047],
-                          [-162.383403, 67.293329],
-                          [-162.633432, 67.272237],
-                          [-162.645587, 67.356665],
-                          [-162.369023, 67.455264],
-                          [-162.287324, 67.551235],
-                          [-162.171139, 67.559356],
-                          [-161.99344, 67.646806],
-                          [-161.857964, 67.620329],
-                          [-161.769431, 67.629407],
-                          [-161.74223, 67.663378]
+                          [-161.74223,
+                            67.663378
+                          ],
+                          [-161.440345,
+                            67.630173
+                          ],
+                          [-161.294611,
+                            67.656257
+                          ],
+                          [-161.228063,
+                            67.625736
+                          ],
+                          [-161.247712,
+                            67.585909
+                          ],
+                          [-161.334662,
+                            67.591324
+                          ],
+                          [-161.566245,
+                            67.491263
+                          ],
+                          [-161.812338,
+                            67.455299
+                          ],
+                          [-161.825019,
+                            67.40123
+                          ],
+                          [-162.128301,
+                            67.414364
+                          ],
+                          [-162.167825,
+                            67.363047
+                          ],
+                          [-162.383403,
+                            67.293329
+                          ],
+                          [-162.633432,
+                            67.272237
+                          ],
+                          [-162.645587,
+                            67.356665
+                          ],
+                          [-162.369023,
+                            67.455264
+                          ],
+                          [-162.287324,
+                            67.551235
+                          ],
+                          [-162.171139,
+                            67.559356
+                          ],
+                          [-161.99344,
+                            67.646806
+                          ],
+                          [-161.857964,
+                            67.620329
+                          ],
+                          [-161.769431,
+                            67.629407
+                          ],
+                          [-161.74223,
+                            67.663378
+                          ]
                         ]
                       ]
                     }
@@ -616,32 +712,77 @@
                   "geographicElement": [{
                     "type": "Feature",
                     "id": "polygon-75",
-                    "bbox": [-10.0, -10.0, 10.0, 10.0],
+                    "bbox": [-10.0, -10.0,
+                      10.0,
+                      10.0
+                    ],
                     "geometry": {
                       "type": "Polygon",
                       "coordinates": [
                         [
-                          [-161.74223, 67.663378],
-                          [-161.440345, 67.630173],
-                          [-161.294611, 67.656257],
-                          [-161.228063, 67.625736],
-                          [-161.247712, 67.585909],
-                          [-161.334662, 67.591324],
-                          [-161.566245, 67.491263],
-                          [-161.812338, 67.455299],
-                          [-161.825019, 67.40123],
-                          [-162.128301, 67.414364],
-                          [-162.167825, 67.363047],
-                          [-162.383403, 67.293329],
-                          [-162.633432, 67.272237],
-                          [-162.645587, 67.356665],
-                          [-162.369023, 67.455264],
-                          [-162.287324, 67.551235],
-                          [-162.171139, 67.559356],
-                          [-161.99344, 67.646806],
-                          [-161.857964, 67.620329],
-                          [-161.769431, 67.629407],
-                          [-161.74223, 67.663378]
+                          [-161.74223,
+                            67.663378
+                          ],
+                          [-161.440345,
+                            67.630173
+                          ],
+                          [-161.294611,
+                            67.656257
+                          ],
+                          [-161.228063,
+                            67.625736
+                          ],
+                          [-161.247712,
+                            67.585909
+                          ],
+                          [-161.334662,
+                            67.591324
+                          ],
+                          [-161.566245,
+                            67.491263
+                          ],
+                          [-161.812338,
+                            67.455299
+                          ],
+                          [-161.825019,
+                            67.40123
+                          ],
+                          [-162.128301,
+                            67.414364
+                          ],
+                          [-162.167825,
+                            67.363047
+                          ],
+                          [-162.383403,
+                            67.293329
+                          ],
+                          [-162.633432,
+                            67.272237
+                          ],
+                          [-162.645587,
+                            67.356665
+                          ],
+                          [-162.369023,
+                            67.455264
+                          ],
+                          [-162.287324,
+                            67.551235
+                          ],
+                          [-162.171139,
+                            67.559356
+                          ],
+                          [-161.99344,
+                            67.646806
+                          ],
+                          [-161.857964,
+                            67.620329
+                          ],
+                          [-161.769431,
+                            67.629407
+                          ],
+                          [-161.74223,
+                            67.663378
+                          ]
                         ]
                       ]
                     },
@@ -1276,7 +1417,7 @@
           }
         }
       ],
-      "taxonomy": {
+      "taxonomy": [{
         "taxonomicSystem": [{
             "citation": {
               "title": "ITIS - Integrated Taxonomic Information System",
@@ -1391,31 +1532,31 @@
           }
         ],
         "taxonomicClassification": {
-          "taxonomicRank": "taxonomicRank0",
-          "latinName": "latinName",
+          "taxonomicLevel": "taxonomicLevel0",
+          "taxonomicName": "taxonomicName",
           "commonName": [
             "commonName0",
             "commonName1"
           ],
           "subClassification": [{
               "taxonomicSystemId": "taxonomicSystemId00",
-              "taxonomicRank": "taxonomicRank00",
-              "latinName": "latinName",
+              "taxonomicLevel": "taxonomicLevel00",
+              "taxonomicName": "taxonomicName",
               "commonName": [
                 "commonName0",
                 "commonName1"
               ],
               "subClassification": [{
-                "taxonomicRank": "taxonomicRank000",
-                "latinName": "latinName",
+                "taxonomicLevel": "taxonomicLevel000",
+                "taxonomicName": "taxonomicName",
                 "commonName": [
                   "commonName0",
                   "commonName1"
                 ],
                 "subClassification": [{
                     "taxonomicSystemId": "taxonomicSystemId0000.1",
-                    "taxonomicRank": "taxonomicRank0000.1",
-                    "latinName": "latinName",
+                    "taxonomicLevel": "taxonomicLevel0000.1",
+                    "taxonomicName": "taxonomicName",
                     "commonName": [
                       "commonName0",
                       "commonName1"
@@ -1424,8 +1565,8 @@
                   },
                   {
                     "taxonomicSystemId": "taxonomicSystemId0000.2",
-                    "taxonomicRank": "taxonomicRank0000.2",
-                    "latinName": "latinName",
+                    "taxonomicLevel": "taxonomicLevel0000.2",
+                    "taxonomicName": "taxonomicName",
                     "commonName": [
                       "commonName0",
                       "commonName1"
@@ -1436,15 +1577,15 @@
               }]
             },
             {
-              "taxonomicRank": "taxonomicRank01",
-              "latinName": "latinName",
+              "taxonomicLevel": "taxonomicLevel01",
+              "taxonomicName": "taxonomicName",
               "commonName": [
                 "commonName0",
                 "commonName1"
               ],
               "subClassification": [{
-                "taxonomicRank": "taxonomicRank010",
-                "latinName": "latinName",
+                "taxonomicLevel": "taxonomicLevel010",
+                "taxonomicName": "taxonomicName",
                 "commonName": [
                   "commonName0",
                   "commonName1"
@@ -1454,7 +1595,7 @@
             }
           ]
         }
-      },
+      }],
       "graphicOverview": [{
           "fileName": "fileName 0",
           "fileDescription": "fileDescription 0",
@@ -2280,6 +2421,7 @@
     ],
     "resourceDistribution": [{
       "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "liabilityStatement": "Blah blah blah liability. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "distributor": [{
           "contact": {
             "role": "distributor",
@@ -2337,7 +2479,8 @@
                     "title": "CSV"
                   },
                   "amendmentNumber": "2.0.8-beta",
-                  "compressionMethod": "7ZipUp"
+                  "compressionMethod": "7ZipUp",
+                  "technicalPrerequisite": "Blah blah blah 2.0 technical prerequisite"
                 },
                 {
                   "formatSpecification": {
@@ -2347,7 +2490,15 @@
               ]
             },
             {
-              "transferSize": 10.9
+              "transferSize": 10.9,
+              "onlineOption": [{
+                "uri": "http://ISO.uri/adiwg/3"
+              }],
+              "distributionFormat": [{
+                "formatSpecification": {
+                  "title": "Microsoft Excel"
+                }
+              }]
             }
           ]
         },
@@ -2513,10 +2664,10 @@
           "contactId": "CID001"
         }]
       },
-      "dictionaryFormat": "format",
+      "dictionaryFunctionalLanguage": "UML",
       "dictionaryIncludedWithResource": true,
       "domain": [{
-          "domainId": "domainId0",
+          "domainId": "DID001",
           "commonName": "commonName",
           "codeName": "codeName",
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -2538,7 +2689,7 @@
           ]
         },
         {
-          "domainId": "domainId1",
+          "domainId": "DID002",
           "commonName": "commonName",
           "codeName": "codeName",
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -2554,6 +2705,9 @@
           "commonName": "commonName",
           "codeName": "codeName",
           "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+          "entityReference": [{
+            "title": "entity reference citation 0"
+          }],
           "primaryKeyAttributeCodeName": [
             "primaryAttribute0",
             "primaryAttribute1"
@@ -2575,18 +2729,21 @@
             }
           ],
           "attribute": [{
-              "commonName": "Common Name for Attribute",
+              "commonName": "Department ID",
               "codeName": "codeName",
               "alias": [
                 "alias0",
                 "alias1"
               ],
               "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+              "attributeReference": {
+                "title": "attribute reference citation Department ID"
+              },
               "dataType": "dataType",
               "allowNull": true,
               "allowMany": false,
               "units": "units",
-              "domainId": "domainId",
+              "domainId": "DID001",
               "minValue": "minValue",
               "maxValue": "maxValue"
             },
@@ -2598,11 +2755,14 @@
                 "employeeNumber"
               ],
               "definition": "Numeric code to uniquely identify an employee of Acme Oil",
+              "attributeReference": {
+                "title": "attribute reference citation for Employee ID"
+              },
               "dataType": "numeric",
               "allowNull": false,
               "allowMany": true,
               "units": "meters",
-              "domainId": "dom042",
+              "domainId": "DID002",
               "minValue": "1000000",
               "maxValue": "5000000"
             }
@@ -2634,38 +2794,47 @@
           "commonName": "commonName",
           "codeName": "codeName",
           "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+          "entityReference": [{
+            "title": "entity reference citation 1"
+          }],
           "primaryKeyAttributeCodeName": [
             "primaryAttribute"
           ],
           "attribute": [{
-              "commonName": "commonName",
+              "commonName": "Supervisor",
               "codeName": "codeName",
               "alias": [
                 "alias0",
                 "alias1"
               ],
               "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+              "attributeReference": {
+                "title": "attribute reference citation for supervisor"
+              },
               "dataType": "dataType",
               "allowNull": true,
               "allowMany": false,
               "units": "units",
-              "domainId": "domainId",
+              "domainId": "DID001",
               "minValue": "minValue",
               "maxValue": "maxValue"
             },
             {
-              "commonName": "Employee ID",
+              "commonName": "Grade",
               "codeName": "empId",
               "alias": [
                 "employeeId",
                 "employeeNumber"
               ],
               "definition": "Numeric code to uniquely identify an employee of Acme Oil",
+              "attributeReference": {
+                "title": "attribute reference citation for grade"
+              },
               "dataType": "numeric",
               "allowNull": false,
               "allowMany": true,
               "units": "meters",
-              "domainId": "dom042",
+              "domainId": "DID002",
               "minValue": "1000000",
               "maxValue": "5000000"
             }
@@ -2695,7 +2864,7 @@
           "contactId": "CID006"
         }]
       },
-      "dictionaryFormat": "MSSQL",
+      "dictionaryFunctionalLanguage": "MSSQL",
       "dictionaryIncludedWithResource": false
     }
   ],

@@ -51,7 +51,6 @@
         "ISO 19115-2": ["MI_Metadata > dateStamp"],
         "FGDC CSDGM": ["metainfo > metrd"]
       },
-      "minItems": 1,
       "items": {
         "$ref": "common.json#/definitions/dateObject"
       }
@@ -62,6 +61,17 @@
       "translation": {},
       "items": {
         "$ref": "./onlineResource.json#"
+      }
+    },
+    "metadataConstraint": {
+      "type": "array",
+      "description": "Provides information about restrictions on the access and use of metadata.",
+      "translation": {
+        "ISO 19115-2": ["MI_Metadata > metadataConstraints"],
+        "FGDC CSDGM": ["metainfo > metac", "metainfo > metuc"]
+      },
+      "items": {
+        "$ref": "./constraint.json#"
       }
     },
     "alternateMetadataReference": {
