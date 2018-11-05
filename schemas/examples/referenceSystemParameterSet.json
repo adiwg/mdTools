@@ -1,0 +1,31 @@
+[{
+    "projection": {
+      "projectionIdentifier": {
+        "identifier": "alaska",
+        "namespace": "org.adiwg.code.mapProjection"
+      }
+    }
+  }, {
+    "geodetic": {
+      "datumIdentifier": {
+        "identifier": "identifier"
+      },
+      "ellipsoidIdentifier": {
+        "identifier": "identifier"
+      },
+      "semiMajorAxis": 9.9,
+      "axisUnits": "axisUnits",
+      "denominatorOfFlatteningRatio": 9.9
+    }
+  }, {
+    "verticalDatum": {
+      "datumIdentifier": {
+        "identifier": "identifier"
+      },
+      "encodingMethod": "encodingMethod",
+      "isDepthSystem": false,
+      "verticalResolution": 9.9,
+      "unitOfMeasure": "unitOfMeasure"
+    }
+  }
+]
