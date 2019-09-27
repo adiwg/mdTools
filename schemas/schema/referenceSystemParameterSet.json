@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "referenceSystemParameterSet.json#",
+  "type": "object",
+  "title": "referenceSystemParameterSet",
+  "description": "The set of parameters describing a spatial reference system.",
+  "example": "../examples/referenceSystemParameterSet.json",
+  "additionalProperties": true,
+  "properties": {
+    "projection": {
+      "$ref": "./projection.json#"
+    },
+    "geodetic": {
+      "$ref": "./geodetic.json#"
+    },
+    "verticalDatum": {
+      "$ref": "./verticalDatum.json#"
+    }
+  },
+  "oneOf": [{
+      "title": "projection is required.",
+      "required": ["projection"]
+    },
+    {
+      "title": "geodetic is required.",
+      "required": ["geodetic"]
+    },
+    {
+      "title": "verticalDatum is required.",
+      "required": ["verticalDatum"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+ [{
+   "sourceId": "sourceId",
+   "description": "description",
+   "sourceCitation": {
+     "title": "title"
+   },
+   "metadataCitation": [{
+     "title": "title"
+   }, {
+     "title": "title"
+   }],
+   "spatialResolution": {
+     "measure": {
+       "type": "distance",
+       "value": 99.9,
+       "unitOfMeasure": "unitOfMeasure"
+     }
+   },
+   "referenceSystem": {
+     "referenceSystemType": "referenceSystemType",
+     "referenceSystemIdentifier": {
+       "identifier": "identifier"
+     }
+   },
+   "sourceProcessStep": [{
+     "description": "description"
+   }, {
+     "description": "description"
+   }]
+ }]

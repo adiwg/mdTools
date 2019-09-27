@@ -1,0 +1,35 @@
+[{
+  "description": "description",
+  "liabilityStatement": "liabilityStatement",
+  "distributor": [{
+      "contact": {
+        "role": "role",
+        "roleExtent": [{
+          "temporalExtent": [{
+            "timePeriod": {
+              "startDateTime": "2016-10-24T11:10:15.2-10:00"
+            }
+          }]
+        }],
+        "party": [{
+          "contactId": "individualId0"
+        }]
+      }
+    },
+    {
+      "contact": {
+        "role": "role",
+        "roleExtent": [{
+          "temporalExtent": [{
+            "timePeriod": {
+              "startDateTime": "2016-10-24T11:10:15.2-10:00"
+            }
+          }]
+        }],
+        "party": [{
+          "contactId": "individualId0"
+        }]
+      }
+    }
+  ]
+}]
