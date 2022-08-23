@@ -45,7 +45,6 @@
     "grunt-gh-pages": "^2.0",
     "json2csv": "^3.7",
     "mdcodes": "^2.8.1",
-    "mustache": "^2.3",
-    "node-sass": "^7.0.1"
+    "mustache": "^2.3"
   }
 }
