@@ -6,7 +6,6 @@ JavaScript tool for visualizing [json-schemas](http://json-schema.org/), include
 The [live application](http://www.adiwg.org/mdJson-schema-viewer/) is rendering the
 [mdJson-schemas](https://github.com/adiwg/mdJson-schemas).
 
-
 Built using:
  - [d3js](http://d3js.org/)
  - [jQUery](http://jquery.com/)
@@ -18,3 +17,7 @@ Built using:
  - [Grunt HTML Boiler](https://github.com/mhulse/grunt-html-boiler)
  - [URI.js](https://github.com/medialize/URI.js)
 
+Build docker:
+ - docker build -t mdtools .
+ - docker run --rm -d -p 8043:8043 mdtools
+ 
