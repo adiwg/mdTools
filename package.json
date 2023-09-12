@@ -42,7 +42,7 @@
     "grunt-browserify": "^5.0",
     "grunt-contrib-connect": "^1.0",
     "grunt-gh-pages": "^2.0",
-    "json2csv": "^3.7",
+    "json2csv": "^6.0.0-alpha.2",
     "mdcodes": "^2.8.1",
     "mustache": "^2.3"
   }
