@@ -38,7 +38,7 @@ module.exports = function(grunt) {
             'short' : '/*! ' +
                       '<%= pkg.title || pkg.name %>' +
                       '<%= pkg.version ? " v" + pkg.version : "" %>' +
-                      '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
+                      '<%= pkg.licenses ? " | " + _.map(pkg.licenses, "type").join(", ") : "" %>' +
                       ' - For included libraries, see source for additional licensing info.' +
                       '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
                       ' */',
@@ -195,7 +195,7 @@ module.exports = function(grunt) {
 
             prod : [
 
-                './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
+                './prod/**/*',
 
             ],
 
@@ -222,10 +222,11 @@ module.exports = function(grunt) {
 
                 files : {
 
-                    './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/<%= pkg.name %>.min.js' : [
+                    './prod/<%= pkg.name %>.min.js' : [
                         //'./files/scripts/jquery.js',
                         //'./files/scripts/jquery.*.js',
                         './bower_components/uri.js/src/URI.js',
+                        './bower_components/file-saver/FileSaver.js',
                         //'./lib/uri.js/jquery.URI.js',
                         './bower_components/tv4/tv4.js',
                         './bower_components/json-schema-viewer/lib/tv4.async-load-jquery.js',
@@ -286,14 +287,14 @@ module.exports = function(grunt) {
 
                 options : {
 
-                    banner : '<%= banner.short %>',
+                    //banner : '<%= banner.short %>',
                     style : 'compressed',
 
                 },
 
                 files : {
 
-                    './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css' : './styles/sass/<%= pkg.name %>.scss',
+                    './prod/styles/<%= pkg.name %>.min.css' : './styles/sass/<%= pkg.name %>.scss',
 
                 },
 
@@ -359,11 +360,6 @@ module.exports = function(grunt) {
                     {
 
                         src : './templates/index.html',
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
-
-                    }, {
-
-                        src : './templates/latest.html',
                         dest : './prod/index.html',
 
                     }
@@ -398,7 +394,17 @@ module.exports = function(grunt) {
                             'images/**/*',
                             '!images/junk/**',
                         ],
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+                        dest : './prod/',
+
+                    },
+                    {
+
+                        expand : true,
+                        cwd : './',
+                        src : [
+                            'assets/**/*',
+                        ],
+                        dest : './prod/',
 
                     },
                     {
@@ -409,27 +415,29 @@ module.exports = function(grunt) {
                             '**/*.json',
                             '!*bower.json',
                         ],
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/schemas',
+                        dest : './prod/schemas',
 
                     },
                     {
 
                         expand : true,
-                        cwd : './bower_components/json-schema-viewer/lib/',
+                        cwd : './lib/',
                         src : [
                             'preinit.js',
                         ],
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/lib',
+                        dest : './prod/lib',
 
                     },
                     {
 
                         expand : true,
+                        flatten: true,
                         cwd : './',
                         src : [
                             'CNAME',
+                            'images/favicon.ico'
                         ],
-                        dest : './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+                        dest : './prod/',
 
                     }
 
@@ -447,7 +455,7 @@ module.exports = function(grunt) {
 
       'gh-pages' : {
         options: {
-          base: './prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+          base: './prod/'
         },
         src: ['**/*']
       },

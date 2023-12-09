@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>David Ward</origin>
+        <origin>Dennis Walworth</origin>
+        <pubdate>20170615</pubdate>
+        <pubtime>16:08</pubtime>
+        <title>Black Brant Banding</title>
+        <edition>2.1</edition>
+        <geoform>tabular digital data</geoform>
+        <serinfo>
+          <sername>Eastern Denali Fault Map</sername>
+          <issue>1</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Anchorage, AK</pubplace>
+          <publish>U.S. Geological Survey, Alaska Science Center</publish>
+        </pubinfo>
+        <othercit>Ward D. H., 2017, Black Brant Banding and Recovery Encounter Histories, Alaska, 1990-2016: U.S. Geological Survey data release, https://doi.org/10.5066/F76971SZ</othercit>
+        <onlink>https://doi.org/10.5066/F76971SZ</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Adrian M Bender (ORCID: 0000-0001-7469-1957)</origin>
+            <pubdate>2015</pubdate>
+            <title>Pacific Black Brant Ecology</title>
+            <geoform>website</geoform>
+            <pubinfo>
+              <pubplace>Anchorage, AK</pubplace>
+              <publish>U.S. Geological Survey, Alaska Science Center</publish>
+            </pubinfo>
+            <onlink>https://alaska.usgs.gov/portal/project.php?project_id=76</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>My abstract.</abstract>
+      <purpose>My purpose.</purpose>
+      <supplinf>My supplemental information.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>19900701</begdate>
+          <begtime>12:30:00</begtime>
+          <enddate>2016</enddate>
+          <endtime>17:30:00</endtime>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <descgeog>Banding data was collected...</descgeog>
+      <bounding>
+        <westbc>-166.81640625</westbc>
+        <eastbc>-74.00390625</eastbc>
+        <northbc>71.6912927186</northbc>
+        <southbc>24.0464639997</southbc>
+      </bounding>
+      <dsgpoly>
+        <dsgpolyo>
+          <grngpoin>
+            <grnglat>1.0</grnglat>
+            <grnglon>1.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>2.0</grnglat>
+            <grnglon>21.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>9.0</grnglat>
+            <grnglon>25.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>10.0</grnglat>
+            <grnglon>6.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>1.0</grnglat>
+            <grnglon>1.0</grnglon>
+          </grngpoin>
+        </dsgpolyo>
+        <dsgpolyx>
+          <grngpoin>
+            <grnglat>6.0</grnglat>
+            <grnglon>10.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>7.0</grnglat>
+            <grnglon>14.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>8.0</grnglat>
+            <grnglon>13.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>8.0</grnglat>
+            <grnglon>7.0</grnglon>
+          </grngpoin>
+          <grngpoin>
+            <grnglat>6.0</grnglat>
+            <grnglon>10.0</grnglon>
+          </grngpoin>
+        </dsgpolyx>
+        <dsgpolyx>
+          <gring>12.0 3.0, 18.0 4.0, 19.0 5.0, 12.0 5.0, 12.0 3.0</gring>
+        </dsgpolyx>
+      </dsgpoly>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>biota</themekey>
+        <themekey>farming</themekey>
+      </theme>
+      <theme>
+        <themekt>NASA GCMD Earth Science Keywords Thesaurus</themekt>
+        <themekey>Earth Science</themekey>
+        <themekey>Biological Classification</themekey>
+        <themekey>Animals/Vertebrates</themekey>
+        <themekey>Birds</themekey>
+        <themekey>Waterfowl</themekey>
+      </theme>
+      <place>
+        <placekt>USGS Geographic Names Information System</placekt>
+        <placekey>Alaska</placekey>
+        <placekey>Colville River Delta</placekey>
+        <placekey>Kuparuk River</placekey>
+        <placekey>Prudhoe Bay</placekey>
+        <placekey>Yukon Kuskokwim Delta</placekey>
+      </place>
+      <place>
+        <placekt>NGA GEOnet Names Server</placekt>
+        <placekey>Canada</placekey>
+        <placekey>Anderson River Delta</placekey>
+        <placekey>Banks Island</placekey>
+        <placekey>Melville Island</placekey>
+      </place>
+      <stratum>
+        <stratkt>Integumentary System</stratkt>
+        <stratkey>stratum corneum</stratkey>
+        <stratkey>stratum lucidum</stratkey>
+        <stratkey>stratum granulosum</stratkey>
+        <stratkey>stratum spinosum</stratkey>
+        <stratkey>stratum basal</stratkey>
+      </stratum>
+      <temporal>
+        <tempkt>Gregorian Calendar</tempkt>
+        <tempkey>year</tempkey>
+        <tempkey>month</tempkey>
+        <tempkey>day</tempkey>
+      </temporal>
+    </keywords>
+    <taxonomy>
+      <keywtax>
+        <taxonkt>None</taxonkt>
+        <taxonkey>animals</taxonkey>
+        <taxonkey>vertebrates</taxonkey>
+        <taxonkey>bird</taxonkey>
+      </keywtax>
+      <taxonsys>
+        <classsys>
+          <classcit>
+            <citeinfo>
+              <origin>Integrated Taxonomic Information System</origin>
+              <pubdate>Unknown</pubdate>
+              <title>Integrated Taxonomic Information System</title>
+              <geoform>database</geoform>
+              <serinfo>
+                <sername>ITIS</sername>
+                <issue>TSN 39074</issue>
+              </serinfo>
+              <othercit>Retrieved December 14, 2016, from the Integrated Taxonomic Information System on-line database http://www.itis.gov</othercit>
+              <onlink>http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=714723</onlink>
+            </citeinfo>
+          </classcit>
+          <classmod>None</classmod>
+        </classsys>
+        <idref>
+          <citeinfo>
+            <origin>Sibley, David Allen</origin>
+            <pubdate>200010</pubdate>
+            <title>National Audubon Society The Sibley Guide to Birds</title>
+            <edition>1st</edition>
+            <geoform>book</geoform>
+          </citeinfo>
+        </idref>
+        <taxonpro>Species were identified by skilled observers in the field based on general appearance of feathers and plumage, behavior, and vocalizations.</taxonpro>
+        <taxoncom>Taxonomy is complete for all samples.  No voucher specimens were collected.</taxoncom>
+      </taxonsys>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <common>animals</common>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <common>cordés</common>
+              <common>cordado</common>
+              <common>chordates</common>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <common>vertebrado</common>
+                <common>vertébrés</common>
+                <common>vertebrates</common>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Aves</taxonrv>
+                      <common>Birds</common>
+                      <common>oiseaux</common>
+                      <taxoncl>
+                        <taxonrn>Order</taxonrn>
+                        <taxonrv>Anseriformes</taxonrv>
+                        <common>Ducks</common>
+                        <common>Geese</common>
+                        <common>Screamers</common>
+                        <common>Swans</common>
+                        <common>Waterfowl</common>
+                        <common>canards</common>
+                        <common>cygnes</common>
+                        <common>oies</common>
+                        <common>sauvagine</common>
+                        <taxoncl>
+                          <taxonrn>Family</taxonrn>
+                          <taxonrv>Anatidae</taxonrv>
+                          <common>Ducks</common>
+                          <common>Geese</common>
+                          <common>Swans</common>
+                          <common>canards</common>
+                          <common>cygnes</common>
+                          <common>oies</common>
+                          <taxoncl>
+                            <taxonrn>Subfamily</taxonrn>
+                            <taxonrv>Anserinae</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Genus</taxonrn>
+                              <taxonrv>Branta</taxonrv>
+                              <common>Brent Geese</common>
+                              <taxoncl>
+                                <taxonrn>Species</taxonrn>
+                                <taxonrv>Branta bernicla</taxonrv>
+                                <common>Brant Goose</common>
+                                <common>Brent Goose</common>
+                                <common>Ganso de collar</common>
+                                <common>Brant</common>
+                                <common>bernache cravant</common>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+    </taxonomy>
+    <accconst>My access constraint</accconst>
+    <useconst>My use constraint</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Dennis Walworth</cntper>
+          <cntorg>USGS</cntorg>
+        </cntperp>
+        <cntpos>Data Manager</cntpos>
+        <cntaddr>
+          <addrtype>mailing</addrtype>
+          <address>mail address line 1</address>
+          <address>mail address line 2</address>
+          <city>Anchorage</city>
+          <state>Alaska</state>
+          <postal>99503</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntaddr>
+          <addrtype>physical</addrtype>
+          <address>physical location 1</address>
+          <city>Anchorage</city>
+          <state>Alaska</state>
+          <postal>99503</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>907-555-1212</cntvoice>
+        <cntvoice>907-555-2323</cntvoice>
+        <cnttdd>907-555-3434</cnttdd>
+        <cnttdd>907-555-4545</cnttdd>
+        <cntfax>907-555-5656</cntfax>
+        <cntfax>907-555-6767</cntfax>
+        <cntemail>name1@myorg.org</cntemail>
+        <cntemail>name2@myorg.org</cntemail>
+        <hours>my hours of service</hours>
+        <cntinst>my contact instructions</cntinst>
+      </cntinfo>
+    </ptcontac>
+    <browse>
+      <browsen>My browse file name</browsen>
+      <browsed>My browse file description</browsed>
+      <browset>My browse file type</browset>
+    </browse>
+    <datacred>My dataset credits</datacred>
+    <secinfo>
+      <secsys>My security system name</secsys>
+      <secclass>Secret</secclass>
+      <sechandl>My security handling instructions</sechandl>
+    </secinfo>
+    <native>My native dataset environment</native>
+    <crossref>
+      <citeinfo>
+        <origin>Alan G. Leach</origin>
+        <origin>David H. Ward</origin>
+        <origin>James S. Sedinger</origin>
+        <origin>Mark S. Lindberg</origin>
+        <origin>W. Sean Boyd</origin>
+        <origin>Jerry W. Hupp</origin>
+        <origin>Robert J. Ritchie</origin>
+        <pubdate>201706</pubdate>
+        <title>Survival and harvest rates of black brant</title>
+        <geoform>journal article</geoform>
+        <serinfo>
+          <sername>Journal of Wildlife Management</sername>
+          <issue>Volume 81, Issue 5</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Online</pubplace>
+          <publish>Wiley Online Library</publish>
+        </pubinfo>
+        <othercit>Alan G. Leach, David H. Ward, James S. Sedinger, Mark S. Lindberg, W. Sean Boyd, Jerry W. Hupp, and Robert J. Ritchie. 2017. Survival and harvest rates of black brant from Arctic and subarctic breeding areas. Journal of Wildlife Management, In Press.</othercit>
+        <onlink>http://onlinelibrary.wiley.com/doi/10.1002/jwmg.21284/full</onlink>
+      </citeinfo>
+    </crossref>
+    <tool>
+      <tooldesc>Program MARK is a Windows-based software application, developed by Gary White (Colorado State University) for the analysis of data from marked individuals. Program MARK provides parameter estimates from marked animals when they are re-encountered at a later time. Re-encounters can be from dead recoveries (e.g., the animal is harvested), live recaptures (e.g. the animal is re-trapped or re-sighted), radio tracking, or from some combination of these sources of re-encounters.</tooldesc>
+      <toolacc>
+        <onlink>http://www.phidot.org/software/mark/index.html</onlink>
+        <onlink>http://www.phidot.org/software/mark/rmark/</onlink>
+        <toolinst>Tool can be downloaded and run on Windows from the phidot.org site. See site documentation for Unix based systems.</toolinst>
+        <toolcomp>Written for Windows XP or newer. The RMark interface is also available as an extension to MARK, from the CRAN website.</toolcomp>
+      </toolacc>
+      <toolcite>
+        <citeinfo>
+          <origin>White, G.C.</origin>
+          <origin>K.P. Burnham</origin>
+          <pubdate>19990626</pubdate>
+          <title>Program MARK: Survival estimation from populations of marked animals</title>
+          <geoform>document</geoform>
+          <serinfo>
+            <sername>Bird Study</sername>
+            <issue>Volume 46 Supplement, 120-138</issue>
+          </serinfo>
+          <pubinfo>
+            <pubplace>Online</pubplace>
+            <publish>Taylor &amp; Francis Online</publish>
+          </pubinfo>
+          <onlink>http://www.tandfonline.com/toc/tbis20/46/sup1?nav=tocList</onlink>
+        </citeinfo>
+      </toolcite>
+    </tool>
+    <tool>
+      <tooldesc>The RMark interface is also available as an extension to Program MARK.</tooldesc>
+      <toolacc>
+        <onlink>http://www.phidot.org/software/mark/rmark/</onlink>
+        <toolinst>Laake, J. L. 2013. RMark: An R interface for analysis of capture-recapture data with MARK.  in  Alaska Fisheries Science Center Report 2013-01. NOAA, National Marine Fisheries Service, Seattle, WA.</toolinst>
+      </toolacc>
+    </tool>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Attributes were spot checked</attraccr>
+    </attracc>
+    <logic>Data format and values are specific</logic>
+    <complete>There are no missing values</complete>
+    <lineage>
+      <method>
+        <methtype>Field</methtype>
+        <methdesc>We captured brant by herding</methdesc>
+      </method>
+      <method>
+        <methtype>Field</methtype>
+        <methdesc>We conducted live resight surveys</methdesc>
+      </method>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Alaska Data Integration working group, AK</origin>
+            <pubdate>20120115</pubdate>
+            <title>ISO 19115-2 Review</title>
+            <geoform>white paper</geoform>
+          </citeinfo>
+        </srccite>
+        <srcscale>25000</srcscale>
+        <typesrc>paper</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20170828</caldate>
+              <time>14:15</time>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication</srccurr>
+        </srctime>
+        <srccitea>ADIwg</srccitea>
+        <srccontr>Understanding of ISO 19115-2 metadata</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Geological Survey Bird Banding Laboratory, Patuxent, Maryland, USA.</origin>
+            <pubdate>20160630</pubdate>
+            <title>Bird Recovery Data 1990-2016</title>
+            <geoform>tabular digital data</geoform>
+            <pubinfo>
+              <pubplace>online</pubplace>
+              <publish>USGS</publish>
+            </pubinfo>
+            <onlink>https://www.pwrc.usgs.gov/bbl/</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>digital database file</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>19900801</begdate>
+              <enddate>20160630</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccitea>USGS BBL</srccitea>
+        <srccontr>The USGS Bird Banding Laboratory (BBL)</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Data on bandings and encounters were converted</procdesc>
+        <srcused>ADIwg</srcused>
+        <srcused>USGS BBL</srcused>
+        <procdate>20170831</procdate>
+        <proctime>135530</proctime>
+        <srcprod>ADIwg</srcprod>
+        <srcprod>Intermediate</srcprod>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Rose Cunningham</cntper>
+              <cntorg>USGS</cntorg>
+            </cntperp>
+            <cntpos>Data Manager</cntpos>
+            <cntemail>name3@myorg.org</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>We removed brant banded in the Arctic</procdesc>
+        <procdate>Unknown</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <indspref>free text</indspref>
+    <direct>Raster</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Circular arc, three point center</sdtstype>
+        <ptvctcnt>9</ptvctcnt>
+      </sdtsterm>
+      <sdtsterm>
+        <sdtstype>G-polygon</sdtstype>
+        <ptvctcnt>99</ptvctcnt>
+      </sdtsterm>
+      <vpfterm>
+        <vpflevel>2</vpflevel>
+        <vpfinfo>
+          <vpftype>Node</vpftype>
+          <ptvctcnt>999</ptvctcnt>
+        </vpfinfo>
+        <vpfinfo>
+          <vpftype>Edge</vpftype>
+          <ptvctcnt>9999</ptvctcnt>
+        </vpfinfo>
+      </vpfterm>
+    </ptvctinf>
+    <rastinfo>
+      <rasttype>Point</rasttype>
+      <rowcount>999</rowcount>
+      <colcount>99</colcount>
+      <vrtcount>9</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geodetic>
+        <horizdn>World Geodetic System of 1984</horizdn>
+        <ellips>World Geodetic System of 1984</ellips>
+        <semiaxis>6378137</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttype>
+        <enttypl>entity 1 label</enttypl>
+        <enttypd>entity 1 definition</enttypd>
+        <enttypds>entity 1 definition source</enttypds>
+      </enttype>
+      <attr>
+        <attrlabl>attribute 1 label</attrlabl>
+        <attrdef>attribute 1 definition</attrdef>
+        <attrdefs>attribute 1 definition source</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>attribute 1 enumerated domain value 1</edomv>
+            <edomvd>attribute 1 enumerated domain value 1 definition</edomvd>
+            <edomvds>attribute 1 enumerated domain value 1 definition source</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>attribute 1 enumerated domain value 2</edomv>
+            <edomvd>attribute 1 enumerated domain value 2 definition</edomvd>
+            <edomvds>attribute 1 enumerated domain value 2 definition source</edomvds>
+          </edom>
+        </attrdomv>
+        <begdatea>20020501</begdatea>
+        <enddatea>20020831</enddatea>
+        <begdatea>20040501</begdatea>
+        <enddatea>20040831</enddatea>
+        <attrvai>
+          <attrva>9.9</attrva>
+          <attrvae>attribute value accuracy explanation</attrvae>
+        </attrvai>
+        <attrmfrq>attribute measurement frequency</attrmfrq>
+      </attr>
+      <attr>
+        <attrlabl>attribute 2 label</attrlabl>
+        <attrdef>attribute 2 definition</attrdef>
+        <attrdefs>attribute 2 definition source</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>9</rdommax>
+            <attrunit>units</attrunit>
+            <attrmres>1</attrmres>
+          </rdom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>A</rdommin>
+            <rdommax>F</rdommax>
+            <attrunit>grade</attrunit>
+            <attrmres>each letter</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>attribute 3 label</attrlabl>
+        <attrdef>attribute 3 definition</attrdef>
+        <attrdefs>attribute 3 definition source</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>codeset name</codesetn>
+            <codesets>codeset source</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>attribute 4 label</attrlabl>
+        <attrdef>attribute 4 definition</attrdef>
+        <attrdefs>attribute 4 definition source</attrdefs>
+        <attrdomv>
+          <udom>unrepresented domain domain</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttype>
+        <enttypl>entity 2 label</enttypl>
+        <enttypd>entity 2 definition</enttypd>
+      </enttype>
+    </detailed>
+    <overview>
+      <eaover>entity and attribute overview 1</eaover>
+      <eadetcit>entity and attribute 1 detail citation 1</eadetcit>
+      <eadetcit>entity and attribute 1 detail citation 2</eadetcit>
+    </overview>
+    <overview>
+      <eaover>another entity and attribute overview 2</eaover>
+      <eadetcit>another entity and attribute 2 detail citation 1</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>distributor 1</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>4210 University Drive</address>
+          <city>Anchorage</city>
+          <state>AK</state>
+          <postal>99508</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>907-786-7000</cntvoice>
+        <cntemail>ascweb@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <resdesc>distribution resource description</resdesc>
+    <distliab>distributor liability statement</distliab>
+    <stdorder>
+      <nondig>option for obtaining non-digital data 1</nondig>
+      <digform>
+        <digtinfo>
+          <formname>Zip</formname>
+          <formvern>19.0</formvern>
+          <formverd>20170907</formverd>
+          <formspec>format specification</formspec>
+          <formcont>format information content</formcont>
+          <filedec>Winzip legacy compression</filedec>
+          <transize>999</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/1</networkr>
+                <networkr>https://doi.org/10.5066/2</networkr>
+              </networka>
+            </computer>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/3</networkr>
+              </networka>
+            </computer>
+            <accinstr>online access instructions</accinstr>
+            <oncomp>online computer and OS</oncomp>
+          </onlinopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/4</networkr>
+                <networkr>https://doi.org/10.5066/5</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+          <offoptn>
+            <offmedia>media 1</offmedia>
+            <reccap>
+              <recden>25</recden>
+              <recden>50</recden>
+              <recden>100</recden>
+              <recdenu>GB</recdenu>
+            </reccap>
+            <recfmt>media format 1</recfmt>
+            <recfmt>media format 2</recfmt>
+            <compat>medium compatibility information</compat>
+          </offoptn>
+          <offoptn>
+            <offmedia>media 2</offmedia>
+            <recfmt>media format 3</recfmt>
+          </offoptn>
+        </digtopt>
+      </digform>
+      <digform>
+        <digtinfo>
+          <formname>Zip7</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/6</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+      <ordering>ordering instructions</ordering>
+      <turnarnd>typical turnaround time</turnarnd>
+    </stdorder>
+    <stdorder>
+      <nondig>option for obtaining non-digital data 2</nondig>
+      <fees>999.99</fees>
+    </stdorder>
+    <custom>distributor custom order process</custom>
+    <techpreq>distribution technical prerequisite</techpreq>
+    <availabl>
+      <timeinfo>
+        <sngdate>
+          <caldate>20170820</caldate>
+          <time>13:30:00</time>
+        </sngdate>
+      </timeinfo>
+    </availabl>
+  </distinfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>distributor 2</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>4210 University Drive</address>
+          <city>Anchorage</city>
+          <state>AK</state>
+          <postal>99508</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>907-786-7000</cntvoice>
+        <cntemail>ascweb@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>distributor liability statement 2</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20161215</metd>
+    <metrd>20170228</metrd>
+    <metfrd>20200701</metfrd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey, Alaska Science Center</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>4210 University Drive</address>
+          <city>Anchorage</city>
+          <state>AK</state>
+          <postal>99508</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>907-786-7000</cntvoice>
+        <cntemail>ascweb@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+    <mettc>universal time</mettc>
+    <metac>access restriction</metac>
+    <metuc>use restriction</metuc>
+    <metsi>
+      <metscs>security classification system</metscs>
+      <metsc>security classification</metsc>
+      <metshd>handling instructions</metshd>
+    </metsi>
+  </metainfo>
+</metadata>

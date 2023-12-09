@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
         <link rel="stylesheet" href="styles/mdtools<!-- @if NODE_ENV='PRODUCTION' -->.min<!-- @endif -->.css" />
-
+        <link rel="shortcut icon"
+         href="/favicon.ico" />
     </head>
     <body>
         <div id="loading">
@@ -90,6 +91,11 @@
                         <p id="info-translation">
                             Select a node to view the translation.
                         </p>
+                        <hr />
+                        <h4>Dependencies:</h4>
+                        <p id="info-dependencies">
+                            Select a node to view any dependencies.
+                        </p>
                     </div>
                     <div class="ui-body-d ui-content info-tab"  id="info-tab-example">
                         <p>
@@ -127,7 +133,7 @@
                     <div class="ui-block-a section">
                         <label for="textarea-json">JSON to Validate:</label>
                         <textarea cols="40" rows="15" name="textarea-json" id="textarea-json" placeholder="Enter your JSON or Drag-n-Drop a file here..."></textarea>
-                        <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/minimum_example.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
+                        <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/mdJson.json" data-target="textarea-json" data-prefetch="true">Load Example</a>
                     </div>
                     <div class="ui-block-b section">
                         <label for="file-upload">Upload File:</label>
@@ -162,13 +168,15 @@
                 <a data-rel="popup" data-role="none" data-position-to="window" class="ui-btn-right main-logo" href="#popup-welcome"  title="Show Info"></a>
             </div>
             <div role="main" class="ui-content">
-                <form id="translation-form" name="translation-form" action="http://mdtranslator.adiwg.org/api/v1/translator">
+                <form id="translation-form" name="translation-form" action="https://mdtranslator.adiwg.org/api/v2/translator">
 
                     <div class="ui-grid-a ui-responsive">
                         <div class="ui-block-a section">
                             <label for="textarea-translator">Input to <b>Translate:</b></label>
                             <textarea cols="40" rows="15" name="file" id="textarea-translator" placeholder="Enter your text or Drag-n-Drop a file here..."></textarea>
-                            <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/minimum_example.json" data-target="textarea-translator" data-prefetch="true">Load Example</a>
+                            <a class="load-example" href="<!-- @if NODE_ENV!='PRODUCTION' -->bower_components/mdjson-<!-- @endif -->schemas/examples/mdJson.json" data-target="textarea-translator" data-prefetch="true">Load mdJSON Example</a>
+                            | <a class="load-example" href="assets/sbJSON.json" data-target="textarea-translator" data-prefetch="true">Load sbJSON Example</a>
+                            | <a class="load-fgdc" href="assets/fgdc.xml" data-target="textarea-translator" data-prefetch="true">Load FGDC CSDGM Example</a>
                         </div>
                         <div class="ui-block-b section">
                             <label for="file-upload">Upload File:</label>
@@ -180,14 +188,19 @@
                                 <select name="reader" id="select-reader" data-native-menu="false">
                                     <option value="" data-placeholder="true">Choose a Reader...</option>
                                     <option value="mdJson">ADIwg mdJSON</option>
+                                    <option value="sbJson">ScienceBase sbJSON</option>
+                                    <option value="fgdc">FGDC CSDGM XML</option>
                                 </select>
                                 <label for="select-writer" class="select">Writer:</label>
                                 <select name="writer" id="select-writer" data-native-menu="false">
                                     <option value="" data-placeholder="true">Choose a Writer...</option>
                                     <option value="">None</option>
-                                    <option value="iso19115_2">ISO 19115-2</option>
-                                    <option value="iso19110">ISO 19110</option>
+                                    <option value="fgdc">FGDC CSDGM XML</option>
                                     <option value="html">HTML</option>
+                                    <option value="iso19115_2">ISO 19115-2 XML</option>
+                                    <option value="iso19110">ISO 19110 XML</option>
+                                    <option value="mdJson">mdJSON</option>
+                                    <option value="sbJson">sbJSON</option>
                                 </select>
                             </div>
                             <div class="ui-field-contain">
@@ -270,7 +283,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{ codelist.codelistName }}</td>
+                                    <td>{{ codelist.codelistName }}
+                                      <a class="small-text" href="#codelink-{{ codelist.codelistName }}-popup" id="permalink" data-rel="popup">Link</a>
+                                      <div data-role="popup" id="codelink-{{ codelist.codelistName }}-popup" class="ui-content" data-arrow="true">
+                                          <label for="codelink">Share:</label>
+                                          <input type="text" id="codelink" style="min-width:300px;" value="{{ uri }}{{ codelist.codelistName }}" data-theme="a">
+                                      </div>
                                     <td>{{ codelist.source }}</td>
                                     <td>{{ codelist.sourceName }}</td>
                                     <td>{{ codelist.description }}</td>
@@ -340,7 +358,7 @@
             </div>
             <div class="ui-content">
                 <p>
-                    mdTools is an interface for <a href="http://www.adiwg.org" data-ajax="false">ADIwg</a> metadata tools.
+                    mdTools is an interface for <a href="https://www.adiwg.org" data-ajax="false">ADIwg</a> metadata tools.
                     The purpose of these tools is to assist with the production of metadata, especially ISO-compliant
                     metadata.
                 </p>
@@ -362,7 +380,7 @@
                         <h3>mdTranslator</h3>
                         <p>
                             A tool that converts between metadata standards. For example, from mdJSON to ISO 19139.
-                            The tool is powered by the <a href="http://mdtranslator.adiwg.org/">mdTranslator webservice</a>.
+                            The tool is powered by the <a href="https://mdtranslator.adiwg.org/">mdTranslator webservice</a>.
                         </p>
                     </li>
                     <li>
@@ -391,6 +409,7 @@
         </script>
         <script type='text/javascript' src="bower_components/tv4/tv4.js"></script>
         <script type='text/javascript' src="bower_components/uri.js/src/URI.js"></script>
+        <script type='text/javascript' src="bower_components/file-saver/FileSaver.js"></script>
         <!--<script type='text/javascript' src="lib/uri.js/jquery.URI.js"></script>-->
         <script type='text/javascript' src="bower_components/json-schema-viewer/lib/tv4.async-load-jquery.js"></script>
         <script type='text/javascript' src="bower_components/d3/d3.js"></script>
