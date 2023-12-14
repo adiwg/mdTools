@@ -40,6 +40,7 @@
     "watch": "grunt watch"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.0",
     "grunt-browserify": "^5.0",
     "grunt-contrib-connect": "^1.0",
     "grunt-dart-sass": "^2.0.1",
