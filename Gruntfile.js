@@ -326,19 +326,6 @@ module.exports = function (grunt) {
     },
 
     /**
-     * Deploy to GitHub Pages.
-     *
-     * @see https://github.com/tschaub/grunt-gh-pages
-     */
-
-    "gh-pages": {
-      options: {
-        base: "./docs/",
-      },
-      src: ["**/*"],
-    },
-
-    /**
      * Start a static web server. Use <code>grunt connect:server:keepalive</code>
      * for a persistent server instance. Default port is <b>9001</b>.
      *
@@ -389,8 +376,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-preprocess");
 
   grunt.loadNpmTasks("grunt-contrib-copy");
-
-  grunt.loadNpmTasks("grunt-gh-pages");
 
   grunt.loadNpmTasks("grunt-contrib-connect");
 

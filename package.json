@@ -46,7 +46,6 @@
     "grunt-browserify": "^5.0",
     "grunt-contrib-connect": "^1.0",
     "grunt-dart-sass": "^2.0.1",
-    "grunt-gh-pages": "^2.0",
     "json2csv": "^3.7",
     "mdcodes": "2.8.4",
     "mustache": "^2.3",
