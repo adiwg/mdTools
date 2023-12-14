@@ -405,8 +405,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask("prod", [
     "init",
-    "dev",
     "env:prod",
+    "browserify",
     "clean:prod",
     "dart-sass:prod",
     "uglify:prod",
