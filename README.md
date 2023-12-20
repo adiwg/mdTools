@@ -1,5 +1,7 @@
 # mdTools
 
+**Note: This application needs some serious maintenance, especially with regards to the json-schema-viewer dependency**
+
 JavaScript tool for visualizing [json-schemas](http://json-schema.org/), includes validator and support for the [mdTranslator](https://github.com/adiwg/mdTranslator) via the [API](https://api.sciencebase.gov/mdTranslator).
 
 The [live application](http://www.adiwg.org/mdJson-schema-viewer/) is rendering the
