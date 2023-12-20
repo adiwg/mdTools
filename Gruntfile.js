@@ -304,8 +304,8 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: "./bower_components/mdjson-schemas/",
-            src: ["**/*.json", "!*bower.json"],
+            cwd: "./node_modules/mdjson-schemas/",
+            src: ["**/*.json", "!package.json"],
             dest: "./docs/schemas",
           },
           {
