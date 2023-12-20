@@ -1,6 +1,0 @@
-[submodule "adiwg-json-schemas"]
-	path = schemas
-	url = https://github.com/adiwg/adiwg-json-schemas.git
-[submodule "lib/d3"]
-	path = lib/d3
-	url = https://github.com/mbostock/d3.git

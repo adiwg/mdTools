@@ -66,3 +66,6 @@ styles/*.map
 .grunt
 bower_components
 
+backup
+.vscode
+docs
