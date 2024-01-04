@@ -41,7 +41,8 @@
     "deploy": "gh-pages -d docs",
     "dev": "grunt dev",
     "start": "grunt",
-    "watch": "grunt watch"
+    "watch": "grunt watch",
+    "test": "http-server -p 8080 docs/"
   },
   "devDependencies": {
     "gh-pages": "^6.1.0",
