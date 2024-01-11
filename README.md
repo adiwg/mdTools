@@ -1,6 +1,16 @@
 # mdTools
 
-**Note: This application needs some serious maintenance, especially with regards to the json-schema-viewer dependency**
+### Review and Update
+
+**Note: This application needs to be reviewed and updated with respect to its dependencies.**
+
+The json-schema-viewer is an example of a dependency that needs to be reviewed. In this case, it looks like the relevant code should be brought directly into this repository, so the code can be native to this repository instead of relying on an unpredictable dependency.
+
+Bower has also been deprecated, so all the bower dependencies need to be updated to be npm dependencies instead.
+
+There are likely to be other changes needed in addition to those.
+
+## What is mdTools
 
 JavaScript tool for visualizing [json-schemas](http://json-schema.org/), includes validator and support for the [mdTranslator](https://github.com/adiwg/mdTranslator) via the [API](https://api.sciencebase.gov/mdTranslator).
 
