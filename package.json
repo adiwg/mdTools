@@ -33,8 +33,8 @@
     "grunt-contrib-watch": "~1",
     "grunt-env": "~0",
     "grunt-preprocess": "~5",
-    "mdcodes": "^2.8.4",
-    "mdjson-schemas": "^2.8.1"
+    "mdcodes": "2.8.4",
+    "mdjson-schemas": "2.8.1"
   },
   "scripts": {
     "build": "grunt prod",
