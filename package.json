@@ -34,7 +34,7 @@
     "grunt-env": "~0",
     "grunt-preprocess": "~5",
     "mdcodes": "2.8.4",
-    "mdjson-schemas": "2.8.1"
+    "mdjson-schemas": "2.8.2"
   },
   "scripts": {
     "build": "grunt prod",
