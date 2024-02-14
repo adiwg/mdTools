@@ -2,7 +2,7 @@
   "title": "mdJSON Schema Viewer",
   "name": "mdtools",
   "description": "Visualize mdJSON schemas using D3.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/adiwg/mdTools",
   "repository": {
     "type": "git",
@@ -32,14 +32,17 @@
     "grunt-contrib-uglify": "~2",
     "grunt-contrib-watch": "~1",
     "grunt-env": "~0",
-    "grunt-preprocess": "~5"
+    "grunt-preprocess": "~5",
+    "mdcodes": "2.9.0",
+    "mdjson-schemas": "2.9.0"
   },
   "scripts": {
     "build": "grunt prod",
     "deploy": "gh-pages -d docs",
     "dev": "grunt dev",
     "start": "grunt",
-    "watch": "grunt watch"
+    "watch": "grunt watch",
+    "test": "http-server -p 8080 docs/"
   },
   "devDependencies": {
     "gh-pages": "^6.1.0",
@@ -47,7 +50,6 @@
     "grunt-contrib-connect": "^1.0",
     "grunt-dart-sass": "^2.0.1",
     "json2csv": "^3.7",
-    "mdcodes": "2.8.4",
     "mustache": "^2.3",
     "sass": "^1.69.5"
   }
