@@ -29,6 +29,9 @@ jobs:
       - name: Build
         run: npm run build # Replace with your build command
 
+      - name: Copy Build
+        run: cp -r docs build
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
