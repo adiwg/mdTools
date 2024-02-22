@@ -27,7 +27,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: github-pages
+          path: docs/
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
