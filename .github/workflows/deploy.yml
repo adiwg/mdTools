@@ -1,5 +1,7 @@
 name: Deploy to GitHub Pages
 
+# adding useless comment
+
 on:
   push:
     branches:
@@ -31,3 +33,4 @@ jobs:
         uses: actions/deploy-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          path: docs

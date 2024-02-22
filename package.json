@@ -39,7 +39,6 @@
   "scripts": {
     "build": "grunt prod",
     "deploy": "gh-pages -d docs",
-    "actiondeploy": "node .github/deploy.js",
     "dev": "grunt dev",
     "start": "grunt",
     "watch": "grunt watch",
