@@ -1,7 +1,5 @@
 name: Deploy to GitHub Pages
 
-# adding useless comment
-
 on:
   push:
     branches:
@@ -27,10 +25,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build # Replace with your build command
-
-      - name: Copy Build
-        run: cp -r docs github-pages
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
