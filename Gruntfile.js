@@ -162,7 +162,7 @@ module.exports = function (grunt) {
       options: {
         force: true, // Allows for deletion of folders outside current working dir (CWD). Use with caution.
       },
-      prod: ["./github-pages/**/*"],
+      prod: ["./docs/**/*"],
     },
 
     /*----------------------------------( UGLIFY )----------------------------------*/
@@ -181,7 +181,7 @@ module.exports = function (grunt) {
         },
 
         files: {
-          "./github-pages/<%= pkg.name %>.min.js": [
+          "./docs/<%= pkg.name %>.min.js": [
             "./bower_components/uri.js/src/URI.js",
             "./bower_components/file-saver/FileSaver.js",
             "./bower_components/tv4/tv4.js",
@@ -214,7 +214,7 @@ module.exports = function (grunt) {
           sourceMap: true,
         },
         files: {
-          "./github-pages/styles/<%= pkg.name %>.css":
+          "./docs/styles/<%= pkg.name %>.css":
             "./styles/sass/<%= pkg.name %>.scss",
         },
       },
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
           sourceMap: false,
         },
         files: {
-          "./github-pages/styles/<%= pkg.name %>.min.css":
+          "./docs/styles/<%= pkg.name %>.min.css":
             "./styles/sass/<%= pkg.name %>.scss",
         },
       },
@@ -272,7 +272,7 @@ module.exports = function (grunt) {
         files: [
           {
             src: "./templates/index.html",
-            dest: "./github-pages/index.html",
+            dest: "./docs/index.html",
           },
         ],
       },
@@ -294,32 +294,32 @@ module.exports = function (grunt) {
             expand: true,
             cwd: "./",
             src: ["images/**/*", "!images/junk/**"],
-            dest: "./github-pages/",
+            dest: "./docs/",
           },
           {
             expand: true,
             cwd: "./",
             src: ["assets/**/*"],
-            dest: "./github-pages/",
+            dest: "./docs/",
           },
           {
             expand: true,
             cwd: "./node_modules/mdjson-schemas/",
             src: ["**/*.json", "!package.json"],
-            dest: "./github-pages/schemas",
+            dest: "./docs/schemas",
           },
           {
             expand: true,
             cwd: "./lib/",
             src: ["preinit.js"],
-            dest: "./github-pages/lib",
+            dest: "./docs/lib",
           },
           {
             expand: true,
             flatten: true,
             cwd: "./",
             src: ["CNAME", "images/favicon.ico"],
-            dest: "./github-pages/",
+            dest: "./docs/",
           },
         ],
       },
