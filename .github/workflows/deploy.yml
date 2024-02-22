@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # Checks out your repository
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16" # Specify your Node.js version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build # Your build script here
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
