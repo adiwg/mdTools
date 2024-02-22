@@ -1,19 +1,25 @@
 const ghpages = require("gh-pages");
 
-const githubToken = process.env.GITHUB_TOKEN;
-const repoURL = `https://x-access-token:${githubToken}@github.com/jwaspin/mdTools.git`;
+if (!process.env.GITHUB_TOKEN) {
+  console.error("GITHUB_TOKEN is not set");
+  process.exit(1);
+}
 
-ghpages.publish(
-  "docs",
-  {
-    branch: "gh-pages",
-    repo: repoURL,
+const options = {
+  branch: "gh-pages",
+  repo: `https://${process.env.GITHUB_TOKEN}:x-oauth-basic@github.com/jwaspin/mdTools.git`,
+  user: {
+    name: "GH Pages Bot",
+    email: "noreply@github.com",
   },
-  function (err) {
-    if (err) {
-      console.error("Deployment error:", err);
-    } else {
-      console.log("Deployment successful!");
-    }
+  dotfiles: true,
+};
+
+ghpages.publish("docs", options, function (err) {
+  if (err) {
+    console.error("Deployment failed", err);
+    process.exit(1);
+  } else {
+    console.log("Deployment successful!");
   }
-);
+});
