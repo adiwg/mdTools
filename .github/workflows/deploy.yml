@@ -8,21 +8,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
     steps:
-      - uses: actions/checkout@v2 # Checks out your repository
+      - uses: actions/checkout@v2
 
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16" # Specify your Node.js version
+          node-version: "16"
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build
-        run: npm run build # Your build script here
+        run: npm run build # Replace with your build command
 
       - name: Deploy to GitHub Pages
-        run: npm run actiondeploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
