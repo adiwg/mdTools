@@ -22,6 +22,11 @@ jobs:
       - name: Build
         run: npm run build # Your build script here
 
+      - name: Setup Git Config
+        run: |
+          git config --local user.email "gh-pages@jwaspin.com"
+          git config --local user.name "GH Pages Bot"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         # env:
