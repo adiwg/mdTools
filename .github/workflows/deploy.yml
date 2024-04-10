@@ -1,28 +1,32 @@
 name: Deploy to GitHub Pages
 
 on:
-  pull_request:
+  pull_request_target:
+    types:
+      - closed
     branches:
       - master
-    types: [closed]
 
 jobs:
-  deploy:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && github.base_ref == 'master'
     steps:
-      - name: Check Out Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: "18"
 
       - name: Install Dependencies
         run: npm install
 
-      - name: Build and Deploy
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
