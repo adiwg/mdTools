@@ -33,11 +33,11 @@
     "grunt-contrib-watch": "~1",
     "grunt-env": "~0",
     "grunt-preprocess": "~5",
-    "mdcodes": "2.9.2",
-    "mdjson-schemas": "2.9.1"
+    "mdcodes": "2.10.0",
+    "mdjson-schemas": "2.9.5"
   },
   "scripts": {
-    "build": "grunt prod",
+    "build": "npm install && grunt prod",
     "deploy": "gh-pages -d docs",
     "dev": "grunt dev",
     "start": "grunt",
