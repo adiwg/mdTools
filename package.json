@@ -28,7 +28,7 @@
     "grunt-contrib-concat": "~1",
     "grunt-contrib-copy": "~1",
     "grunt-contrib-jshint": "~1",
-    "grunt-contrib-sass": "~1",
+    "grunt-contrib-sass": "~2",
     "grunt-contrib-uglify": "~2",
     "grunt-contrib-watch": "~1",
     "grunt-env": "~0",
