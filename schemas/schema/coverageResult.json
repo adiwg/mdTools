@@ -1,0 +1,50 @@
+{
+  "id": "coverageResult.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["spatialRepresentationType", "spatialRepresentation"],
+  "description": "Result of data quality measure organizing the measured values as a coverage.",
+  "translation": {
+    "ISO 19115-2": ["MI_Metadata > DQ_DataQuality > Report > coverageResult"]
+  },
+  "anyOf": [
+    {
+      "title": "resourceFormat and resultFile required",
+      "required": ["resourceFormat", "resultFile"]
+    },
+    {
+      "title": "resultContentDescription required",
+      "required": ["resultContentDescription"]
+    }
+  ],
+  "properties": {
+    "dateTime": {
+      "type": "string",
+      "description": "Date when the result was generated."
+    },
+    "scope": {
+      "$ref": "./scope.json#",
+      "description": "Scope of the result."
+    },
+    "spatialRepresentationType": {
+      "type": "string",
+      "description": "Method used to spatially represent the coverage result."
+    },
+    "spatialRepresentation": {
+      "$ref": "./spatialRepresentation.json#",
+      "description": "Provides the digital representation of data quality measures composing the coverage result."
+    },
+    "resultContentDescription": {
+      "$ref": "./coverageDescription.json#",
+      "description": "Provides the description of the content of the result coverage when the quality coverage is included with the resource being described. i.e. semantic definition of the data quality measures."
+    },
+    "resourceFormat": {
+      "$ref": "./format.json#",
+      "description": "Provides information about the format of the result coverage data."
+    },
+    "resultFile": {
+      "$ref": "./qualityResultFile.json#",
+      "description": "Provides information about the data file containing the result coverage data."
+    }
+  }
+}
